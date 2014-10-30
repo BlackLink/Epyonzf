@@ -23,21 +23,21 @@
     <div class="fixed">
       <nav class="top-bar" data-topbar>
         <ul class="title-area">
-          <li class="name"><h1><a href="">Epyon</a></h1></li>
+          <li class="name"><h1><a href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>">Epyon</a></h1></li>
           <li class="toggle-topbar menu-icon"><a href="">Menu</a></li>
         </ul>
         
         <section class="top-bar-section">
           <ul class="right">
-            <li><a href="">Planos</a></li>
-            <li><a href="">Quem Somos</a></li>
-            <li><a href="">Contato</a></li>
+            <li><a href="<?=$this->url(array('controller'=>'planos','action'=>'index'),null,true)?>">Planos</a></li>
+            <li><a href="<?=$this->url(array('controller'=>'quem-somos','action'=>'index'),null,true)?>">Quem Somos</a></li>
+            <li><a href="<?=$this->url(array('controller'=>'contato','action'=>'index'),null,true)?>">Contato</a></li>
             <li class="has-form"><a href="http://foundation.zurb.com/docs" class="button success radius">Entrar</a></li>
           </ul>
         </section>
       </nav>
     </div>
-  </div>
+ </div>
     
     <div class="content">
         <?php echo $this->layout()->content;?>
@@ -48,5 +48,21 @@
   <script>
     $(document).foundation();
   </script>
+  
+  <!-- Footer do layout principal -->
+  <footer id="footer">
+        <div class="row">
+            <div class="small-3 columns small-centered">
+               www.epyon.com.br © - 2014
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="small-3 columns small-centered small-push-1">
+                <strong><a href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>">Epyon</a></strong>
+            </div>
+        </div>
+  </footer>
+  
 </body>
 </html>

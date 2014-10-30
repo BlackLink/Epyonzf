@@ -6170,3 +6170,21 @@ th.hide-for-touch {
 
   th.show-for-print {
     display: table-cell !important; } }
+
+///RODAPE
+//footer{
+  //  margin-top: 1000px;
+  // margin-left: 1000px;
+//}
+
+#footer {
+    color: #6d6d6d;
+    font-size: 12px;
+    text-align: center;
+}
+#footer p {
+    margin-bottom: 0;
+}
+#footer a {
+    color: inherit;
+}
