@@ -10,7 +10,12 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+        $modelPais = new Application_Model_Pais;
+        
+        $selectPaises = $modelPais->select();
+        
+        
+        $this->view->assign('pais', $selectPaises);
     }
 
 

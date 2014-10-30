@@ -11,6 +11,7 @@
           <actionMethod actionName="index"/>
         </controllerFile>
         <controllerFile controllerName="Error"/>
+<<<<<<< HEAD
         <controllerFile controllerName="Planos">
           <actionMethod actionName="index"/>
         </controllerFile>
@@ -18,12 +19,38 @@
           <actionMethod actionName="index"/>
         </controllerFile>
         <controllerFile controllerName="Contato">
+=======
+        <controllerFile controllerName="Cliente">
+>>>>>>> d59443de5169c97caffe1e13cb205f858eaa78a9
           <actionMethod actionName="index"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
       <layoutsDirectory enabled="false"/>
-      <modelsDirectory/>
+      <modelsDirectory>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Cidade"/>
+          <dbTableFile dbTableName="Pais"/>
+          <dbTableFile dbTableName="Cliente"/>
+          <dbTableFile dbTableName="ClientePF"/>
+          <dbTableFile dbTableName="ClientePJ"/>
+          <dbTableFile dbTableName="Compra"/>
+          <dbTableFile dbTableName="DadosCartao"/>
+          <dbTableFile dbTableName="EmailColaboradores"/>
+          <dbTableFile dbTableName="Endereco"/>
+          <dbTableFile dbTableName="EspecifProjetos"/>
+          <dbTableFile dbTableName="EspecifProjetosExtras"/>
+          <dbTableFile dbTableName="Estado"/>
+          <dbTableFile dbTableName="Estimativas"/>
+          <dbTableFile dbTableName="Login"/>
+          <dbTableFile dbTableName="PreCliente"/>
+          <dbTableFile dbTableName="Projetos"/>
+          <dbTableFile dbTableName="Telfone"/>
+          <dbTableFile dbTableName="TipoCartao"/>
+          <dbTableFile dbTableName="TipoPlano"/>
+        </dbTableDirectory>
+        <modelFile modelName="Pais"/>
+      </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
       <viewsDirectory>
@@ -34,6 +61,7 @@
           <viewControllerScriptsDirectory forControllerName="Error">
             <viewScriptFile forActionName="error"/>
           </viewControllerScriptsDirectory>
+<<<<<<< HEAD
           <viewControllerScriptsDirectory forControllerName="Planos">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
@@ -41,6 +69,9 @@
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Contato">
+=======
+          <viewControllerScriptsDirectory forControllerName="Cliente">
+>>>>>>> d59443de5169c97caffe1e13cb205f858eaa78a9
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
