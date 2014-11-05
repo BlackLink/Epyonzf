@@ -34,8 +34,8 @@
               
               <h1>
                 
-                <a href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>">
-                  <img src="img/epyon.png">
+                <a href="">
+                  
                 </a>
 
               </h1>
@@ -51,29 +51,29 @@
             <ul class="right">
               
               <li>
-                <a href="pag-home-pos-log.html">Home</a>
+                <a href="<?=$this->url(array('controller'=>'pos-login','action'=>'index'),null,true)?>">Home</a>
               </li>
               
               <li>
-                <a href="pag-colaboradores.html"> Colaboradores </a>
+                <a href="<?=$this->url(array('controller'=>'colaboradores','action'=>'index'),null,true)?>"> Colaboradores </a>
               </li>
 
               <li>
-                <a href="pag-projetos.html">Projetos</a> 
+                <a href="<?=$this->url(array('controller'=>'projetos','action'=>'index'),null,true)?>">Projetos</a> 
               </li>
               
               <li class = "has-dropdown">
 
-                <a href="#">Relatórios</a>
+                <a>Relatórios</a>
 
                 <ul class = "dropdown">
 
                   <li>
-                    <a href="envio-relatorio.html">Enviar</a>
+                    <a href="<?=$this->url(array('controller'=>'envio-relatorios','action'=>'index'),null,true)?>">Enviar</a>
                   </li>
 
                   <li>
-                    <a href="pag-relatorio.html">Visualizar</a>
+                    <a href="<?=$this->url(array('controller'=>'relatorios','action'=>'index'),null,true)?>">Visualizar</a>
                   </li>
 
                 </ul>
@@ -81,7 +81,7 @@
               </li>
               
               <li>
-                <a href="pag-estimativas.html">Estimativas</a>
+                <a href="<?=$this->url(array('controller'=>'estimativas','action'=>'index'),null,true)?>">Estimativas</a>
               </li>
               
               <li>
@@ -89,7 +89,7 @@
               </li>
 
               <li class="has-form">
-                <a href="http://foundation.zurb.com/docs" class="button alert radius">Sair</a>
+                <a href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>" class="button alert radius">Sair</a>
               </li>
 
             </ul>
@@ -106,31 +106,40 @@
         <?php echo $this->layout()->content;?>
     </div>
 
-    <!-- Footer do layout principal -->
-    <footer id="footer">
-          
-          <div class="row">
-            
-            <div class = "small-12 columns">
-
-              <fieldset>
-                
-                <div class="small-3 columns small-centered">
-                   www.epyon.com.br © - 2014
-                </div>
-
-                <div class="small-3 columns small-centered small-push-1">
-                    
-                    <strong><a href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>">Epyon</a></strong>
-
-                </div>
-
-              </fieldset>
-            </div>
-
-          </div>
-
-    </footer>
+    <!-- Footer do site -->
+  
+  <footer class="footer">
+    <div class="row full-width">
+        <div class="small-12 medium-3 large-4 columns">
+            <i class="fi-laptop"></i>
+            <p>O Epyon é um gerenciador de estimativas de desenvolvimento de software criado pela equipe da Versalius, com a finalidade de automatizar e gerenciar o processo de calculo de estimativas</p>
+        </div>
+      
+    <div class="small-12 medium-3 large-4 columns">
+        <i class="fi-shield"></i>
+        <p>A segurança da informação é uma das maiores preocupações da nossa equipe, por isso desenvolvemos o Epyon visando proteger os dados dos nossos usuários.</p>
+    </div>
+    
+    <div class="small-6 medium-3 large-2 columns">
+      <h4>Menu</h4>
+      <ul class="footer-links">
+        <li><a href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>">Home</a></li>
+        <li><a href="<?=$this->url(array('controller'=>'planos','action'=>'index'),null,true)?>">Planos</a></li>
+        <li><a href="<?=$this->url(array('controller'=>'quem-somos','action'=>'index'),null,true)?>">Quem Somos</a></li>
+        <li><a href="<?=$this->url(array('controller'=>'contato','action'=>'index'),null,true)?>">Contato</a></li>
+      <ul>
+    </div>
+    
+    <div class="small-6 medium-3 large-2 columns">
+      <h4>Siga-me</h4>
+      <ul class="footer-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+      <ul>
+    </div>
+  
+  </div>
+</footer>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>

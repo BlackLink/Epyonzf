@@ -6381,3 +6381,15 @@ ul.pricing-table i { display: inline-block; margin-right: 5px; }
     margin-right: auto;
   }
 }
+
+/* Daqui para baixo são alterações extras */
+	
+i#iConGeral
+{
+	font-size: 25px;
+}
+
+fieldset#fieldPadrao
+{
+	background: #FAFAD2;
+}
