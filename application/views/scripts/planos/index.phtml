@@ -1,4 +1,142 @@
 <br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Planos</b> and script/action name <b>index</b></p>
-</div>
+
+    <!-- Tabela de Preços -->
+    <div class="row collapse">
+        <div class="large-4 columns">
+            <ul class="pricing-table left-side">
+                <li class="title">Standard</li>
+                <li class="price">R$19.99</li>
+                <li class="bullet-item"><i class="fi-torso"></i>1 Master</li>
+                <li class="bullet-item"><i class="fi-folder"></i>10 Projetos</li>
+                <li class="bullet-item"><i class="fi-telephone"></i>Suporte Integral</li>
+                <li class="cta-button"><a class="button" href="#">Compre Agora</a></li>
+            </ul>
+        </div>
+        <div class="large-4 columns recommended">
+            <ul class="pricing-table">
+                <li class="title">Plus</li>
+                <li class="price">R$59.99</li>
+                <li class="bullet-item"><i class="fi-torsos"></i>3 Masters</li>
+                <li class="bullet-item"><i class="fi-folder"></i>20 Projetos/Master</li>
+                <li class="bullet-item"><i class="fi-telephone"></i>Suporte Integral</li>
+                <li class="bullet-item"><i class="fi-clipboard-pencil"></i>Capacitação</li>
+                <li class="cta-button"><a class="button" href="#">Compre Agora</a></li>
+            </ul>
+        </div>
+        <div class="large-4 columns">
+            <ul class="pricing-table right-side">
+                <li class="title">Premium</li>
+                <li class="price">R$99.99</li>
+                <li class="bullet-item"><i class="fi-torsos-all"></i>5 Masters</li>
+                <li class="bullet-item"><i class="fi-folder"></i>30 Projetos/Master</li>
+                <li class="bullet-item"><i class="fi-telephone"></i>Suporte Integral</li>
+                <li class="bullet-item"><i class="fi-clipboard-pencil"></i>Capacitação</li>
+                <li class="cta-button"><a class="button" href="#">Compre Agora</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <br />
+    
+    <div class="row">
+        <div class="small-8 left-side">
+            <p> Valores mensais. Consulte condições especiais para o pagamento anual </p> 
+            <p> Precisa de mais usuários? Entre em <a href="<?=$this->url(array('controller'=>'contato','action'=>'index'),null,true)?>" target="_blank">contato</a></p>
+        </div>
+        <hr>
+    </div>
+    
+    <!-- Tabela de Informações dos planos -->
+    <div class="row">
+        <div class="small-9 columns small-centered">
+            <table>
+                <caption>Funcionalidades</caption>
+                    <tr>
+                        <th></th>
+                        <th scope="column">Standard</th>
+                        <th scope="column">Plus</th>
+                        <th scope="column">Premium</th>
+                    </tr>
+                    <tr>
+                        <th>Usuários Master</th>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <th>Segurança por perfil de usuário</th>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Projetos</th>
+                        <td>10</td>
+                        <td>20 Projetos/Master</td>
+                        <td>30 Projetos/Master</td>
+                    </tr>
+                    <tr>
+                        <th>Gestão de Estimativas</th>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Relatório de Resultados</th>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Separadores de tipos de projetos</th>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Estimativas baseadas em projetos concluidos</th>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Acesso à documentação</th>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Suporte por ticket</th>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Capacitação</th>
+                        <td></td>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Backup a cada 1h</th>
+                        <td></td>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Disponibilidade de 99,5%</th>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                    </tr>
+                    <tr>
+                        <th>Gestão de Infraestrutura</th>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                        <td><i class="fi-check"></i></td>
+                    </tr>
+                    
+            </table>
+        </div>
+    </div>
+<br /><br />

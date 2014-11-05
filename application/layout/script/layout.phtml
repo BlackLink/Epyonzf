@@ -11,58 +11,127 @@
   <!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/foundation.css">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+
 
   <!-- If you are using the gem version, you need this only -->
 
   <script src="js/vendor/modernizr.js"></script>
 
 </head>
-<body>
 
-<div class="row">
-    <div class="fixed">
-      <nav class="top-bar" data-topbar>
-        <ul class="title-area">
-          <li class="name"><h1><a href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>">Epyon</a></h1></li>
-          <li class="toggle-topbar menu-icon"><a href="">Menu</a></li>
-        </ul>
-        
-        <section class="top-bar-section">
-          <ul class="right">
-            <li><a href="<?=$this->url(array('controller'=>'planos','action'=>'index'),null,true)?>">Planos</a></li>
-            <li><a href="<?=$this->url(array('controller'=>'quem-somos','action'=>'index'),null,true)?>">Quem Somos</a></li>
-            <li><a href="<?=$this->url(array('controller'=>'contato','action'=>'index'),null,true)?>">Contato</a></li>
-            <li class="has-form"><a href="http://foundation.zurb.com/docs" class="button success radius">Entrar</a></li>
-          </ul>
-        </section>
-      </nav>
-    </div>
- </div>
+<body>
     
-    <div class="content">
-        <?php echo $this->layout()->content;?>
+  <!-- Painel de Login -->
+  
+  <div id="myModal" class="reveal-modal remove-whitespace" data-reveal>
+    <div class="row">
+        <div class="large-6 columns auth-plain">
+            <div class="signup-panel left-solid">
+                <p class="welcome">Já Registrado</p>
+                <form>
+                <div class="row collapse">
+                    <div class="small-2  columns">
+                    <span class="prefix"><i class="fi-torso"></i></span>
+                </div>
+                <div class="small-10  columns">
+                    <input type="text" name = "tUserName" id="cUserName" placeholder="Insira nome de usuário..." required pattern="[a-zA-Z]+"/>   
+                </div>    
+                </div>
+                <div class="row collapse">
+                    <div class="small-2 columns ">
+                        <span class="prefix"><i class="fi-lock"></i></span>
+                    </div>
+                    <div class="small-10 columns ">
+                        <input type="text" name = "tUserPassword" id="cUserPassword" placeholder="Insira a senha de usuário..." required pattern="[a-zA-Z]+"/>
+                    </div>
+                </div>
+                </form>
+                <a href="#" class="button sucess radius "><b> Log In</b> </a>
+                <div class="small-12">
+                    <label><a href="#"> Esqueceu sua senha?</a></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="large-6 columns auth-plain">
+            <div class="signup-panel newusers">
+                <p class="welcome"> Novo Usuário?</p>
+                <p>Criando uma conta conosco, você conseguirá usar todos os nossos serviços e muito mais. Faça parte do Epyon você também</p><br>
+                <a href="#" class="button alert radius "> <b>Sign Up</b> </a></br>
+            </div>
+        </div>
+
+    </div>   
+    <a class="close-reveal-modal">&#215;</a>
     </div>
+    
+  <!-- Barra de navegação superior -->
+    <div class="row">
+        <div class="fixed">
+            <nav class="top-bar" data-topbar>
+                <ul class="title-area">
+                    <li class="name"><h1><a href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>">Epyon</a></h1></li>
+                    <li class="toggle-topbar menu-icon"><a href="">Menu</a></li>
+                </ul>
+        
+                <section class="top-bar-section">
+                    <ul class="right">
+                        <li><a href="<?=$this->url(array('controller'=>'planos','action'=>'index'),null,true)?>">Planos</a></li>
+                        <li><a href="<?=$this->url(array('controller'=>'quem-somos','action'=>'index'),null,true)?>">Quem Somos</a></li>
+                        <li><a href="<?=$this->url(array('controller'=>'contato','action'=>'index'),null,true)?>">Contato</a></li>
+                        <li class="has-form"><a href="#" data-reveal-id="myModal" class="button success radius">Entrar</a></li>
+                    </ul>
+                </section>
+            </nav>
+        </div>
+    </div>
+    
+ <div class="content">
+    <?php echo $this->layout()->content;?>
+ </div>
 
   <script src="js/vendor/jquery.js"></script>
   <script src="js/foundation.min.js"></script>
+  
   <script>
     $(document).foundation();
   </script>
+
+  <!-- Footer do site -->
   
-  <!-- Footer do layout principal -->
-  <footer id="footer">
-        <div class="row">
-            <div class="small-3 columns small-centered">
-               www.epyon.com.br © - 2014
-            </div>
+  <footer class="footer">
+    <div class="row full-width">
+        <div class="small-12 medium-3 large-4 columns">
+            <i class="fi-laptop"></i>
+            <p>O Epyon é um gerenciador de estimativas de desenvolvimento de software criado pela equipe da Versalius, com a finalidade de automatizar e gerenciar o processo de calculo de estimativas</p>
         </div>
-        
-        <div class="row">
-            <div class="small-3 columns small-centered small-push-1">
-                <strong><a href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>">Epyon</a></strong>
-            </div>
-        </div>
-  </footer>
+      
+    <div class="small-12 medium-3 large-4 columns">
+        <i class="fi-shield"></i>
+        <p>A segurança da informação é uma das maiores preocupações da nossa equipe, por isso desenvolvemos o Epyon visando proteger os dados dos nossos usuários.</p>
+    </div>
+    
+    <div class="small-6 medium-3 large-2 columns">
+      <h4>Menu</h4>
+      <ul class="footer-links">
+        <li><a href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>">Home</a></li>
+        <li><a href="<?=$this->url(array('controller'=>'planos','action'=>'index'),null,true)?>">Planos</a></li>
+        <li><a href="<?=$this->url(array('controller'=>'quem-somos','action'=>'index'),null,true)?>">Quem Somos</a></li>
+        <li><a href="<?=$this->url(array('controller'=>'contato','action'=>'index'),null,true)?>">Contato</a></li>
+      <ul>
+    </div>
+    
+    <div class="small-6 medium-3 large-2 columns">
+      <h4>Siga-me</h4>
+      <ul class="footer-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+      <ul>
+    </div>
+  
+  </div>
+</footer>
   
 </body>
 </html>

@@ -6171,20 +6171,213 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
-///RODAPE
-//footer{
-  //  margin-top: 1000px;
-  // margin-left: 1000px;
-//}
+// Footer Zurb
+.full-width {
+  max-width: 1400px;
+}
 
-#footer {
-    color: #6d6d6d;
-    font-size: 12px;
+.footer {
+  background-color: #333333;
+  padding: 2rem 4rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 0px;
+  bottom: 0px;
+}
+.footer i {
+  font-size: 100px;
+}
+
+.footer h4 {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+  margin-bottom: 10px;
+}
+.footer p, .footer a {
+  font-weight: 300;
+  font-size: .8em;
+  color: #fff;
+}
+
+@media only screen and (min-width: 40.063em) {
+  .footer .columns:nth-child(n+2) {
+    border-left: 1px solid #b3b3b3;
+    min-height: 280px;
+  }
+}
+.footer-links {
+  list-style-type: none;
+}
+.footer-links li {
+  margin-top: .5em;
+}
+
+// Ajustes de imagens pequenas
+i#IconLarge{
+   font-size: 50px; 
+}
+
+// Estilos para painel do login
+
+.auth-plain {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 0px;
+}
+
+.left-solid {
+margin-top: 0px;
+margin-bottom: 0px;
+}
+
+.signup-panel {
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: #fff;
+}
+
+.signup-panel i {
+  font-size: 30px;
+  line-height: 50px;
+  color: #999;
+}
+.signup-panel form input, .signup-panel form span {
+  height: 50px;
+}
+.signup-panel .welcome {
+  font-size: 26px;
+  text-align: center;
+  margin-left: 0;
+}
+.signup-panel p {
+  font-size: 13px;
+  font-weight: 200;
+  text-align: center;
+}
+.signup-panel .button {
+  margin-left: 35%;
+}
+
+.newusers {
+  background: #fff;
+}        
+
+// Tabela de planos
+
+ul.pricing-table { margin-bottom: 0; }
+ul.pricing-table .price { background: #f8f8f8;  }
+ul.pricing-table i { display: inline-block; margin-right: 5px; } 
+
+.recommended { box-shadow: 0 0 10px rgba(0,0,0,0.25); position: relative; z-index: 2; }
+
+@media only screen and (min-width: 768px){
+  .left-side { border-right: none; }
+  .right-side { border-left: none; }
+}
+
+/*------------------------------------
+ timeline styles
+------------------------------------*/
+.path-container {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+.path-container .path-item h1 {
+  text-align: center;
+  margin-bottom: 70px;
+}
+.path-container .path-item h3 {
+  margin-bottom: 10px;
+  line-height: 1.15;
+}
+.path-container .path-item p {
+  font-size: emCalc(16px);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+.path-container .path-item a {
+  font-weight: bold;
+  font-size: emCalc(14px);
+}
+.path-container .path-item .circle {
+  background-color: #C30;
+  background-size: 156px 156px;
+  border-radius: 50%;
+  width: 156px;
+  height: 156px;
+  position: relative;
+  margin-bottom: 180px;
+  z-index: 2;
+}
+.path-container .path-item .circle.circle-left {
+  left: -7px;
+}
+.path-container .path-item .circle.circle-right {
+  right: -10px;
+}
+.path-container .line {
+  background: #C60;
+  width: 2px;
+  bottom: 0;
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  z-index: 0;
+  height: 1164px;
+}
+
+/*------------------------------------
+ medium timeline styles
+------------------------------------*/
+@media only screen and (max-width: 800px) and (min-width: 768px) {
+  .line {
+    display: none !important;
+  }
+
+  .large-5.columns.path-text {
+    width: 70%;
+    right: 0;
+    margin-left: 15px;
+  }
+
+  .path-item .large-7 {
+    width: 25%;
+  }
+
+  .push-5 {
+    left: 0;
+    float: right;
+  }
+
+  .circle-right {
+    float: left;
+    right: 0px !important;
+  }
+
+  .circle-left {
+    left: 0px !important;
+  }
+}
+/*------------------------------------
+ mobile timeline styles
+------------------------------------*/
+@media only screen and (max-width: 767px) {
+  .path-container {
     text-align: center;
-}
-#footer p {
-    margin-bottom: 0;
-}
-#footer a {
-    color: inherit;
+  }
+  .path-container .circle {
+    top: 0;
+    right: 0;
+    left: 0;
+    float: none;
+    margin-bottom: 30px !important;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
