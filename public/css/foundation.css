@@ -6188,3 +6188,15 @@ th.hide-for-touch {
 #footer a {
     color: inherit;
 }
+
+/* Daqui para baixo são alterações extras */
+	
+i#iConGeral
+{
+	font-size: 25px;
+}
+
+fieldset#fieldPadrao
+{
+	background: #FAFAD2;
+}

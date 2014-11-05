@@ -6170,3 +6170,18 @@ th.hide-for-touch {
 
   th.show-for-print {
     display: table-cell !important; } }
+
+#footer {
+    color: #6d6d6d;
+    font-size: 12px;
+    text-align: center;
+}
+#footer p {
+    margin-bottom: 0;
+}
+#footer a {
+    color: inherit;
+}
+
+#footer a 
+{color: inherit;}
