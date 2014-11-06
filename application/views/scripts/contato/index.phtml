@@ -1,4 +1,96 @@
 <br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Contato</b> and script/action name <b>index</b></p>
-</div>
+
+<!-- Página de contato com a Versalius -->
+<div class="row">
+ 
+    <!-- Contact Details -->
+    <div class="large-9 columns">
+ 
+      <h3>Fale Conosco!</h3>
+      <p>Se quiser saber mais sobre nossas competências e produtos contate-nos seguindo as instruções abaixo. Estaremos sempre disponíveis a ajudá-lo.</p>
+ 
+      <div class="section-container tabs" data-section>
+        <section class="section">
+          <h5 class="title">Preencha os dados abaixo para que possamos analizar sua dúvida</h5>
+          <div class="content" data-slug="panel1">
+            <form class="data-abide" method="post" action="<?=$this->url(array('controller'=>'contato','action'=>'index'),null,true)?>">
+              <div class="row collapse">
+                <div class="large-2 columns">
+                  <label class="inline">Seu nome</label>
+                </div>
+                <div class="large-10 columns">
+                  <input type="text" id="yourName" placeholder="Digite seu nome ..." required pattern="[a-zA-Z]+">
+                </div>
+              </div>
+              <div class="row collapse">
+                <div class="large-2 columns">
+                  <label class="inline"> Seu e-mail</label>
+                </div>
+                <div class="large-10 columns">
+                  <input type="text" id="yourEmail" placeholder="ex: fulano@versalius.com ..." required pattern="[a-zA-Z]+">
+                </div>
+              </div>
+              <label>Comentário</label>
+              <textarea rows="4"></textarea>
+              <input type="submit" value="Enviar" class="button sucess radius">
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+ 
+    <!-- End Contact Details -->
+ 
+ 
+    <!-- Sidebar -->
+ 
+ 
+    <div class="large-3 columns">
+      <h5>Mapa</h5>
+      <!-- Clicking this placeholder fires the mapModal Reveal modal -->
+      <p>
+        <a href="" data-reveal-id="mapModal"><img src="img/mapa/mapa-400-280.png"></a><br />
+        <a href="" data-reveal-id="mapModal">View Map</a>
+      </p>
+      <p>
+        Avenida Soares Lopes, nº05<br />   
+        Centro, ilhéus - BA
+      </p>
+    </div>
+    <!-- End Sidebar -->
+    <hr>
+    </div>
+ 
+    <!-- End Main Content and Sidebar -->
+
+    <!-- Map Modal -->
+
+    <div id="mapModal" class="reveal-modal" data-reveal>
+        <h4>Estamos aqui</h4>
+        <p><img src="img/mapa/mapa-800-600.png" /></p>
+ 
+        <!-- Any anchor with this class will close the modal. This also inherits certain styles, which can be overriden. -->
+        <a class="close-reveal-modal">&#215;</a>
+    </div>  
+    
+    
+    
+    <div class="row">
+        <div class="small-6">
+            <div>
+                <p>E-mail para contato versalius.it@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="small-7 columns small-centered">
+            <div class="panel radius">
+                <p><strong><br>Razão Social:</strong> Desenvolvimento de Sistemas Versalius Ltda <strong><br> CNPJ:</strong>88.460.115/0001-90 <strong><br>Fone:</strong>+55 (73)91186366</p>
+                
+            </div>
+        </div>
+    </div>
+    
+ <br />
+    
