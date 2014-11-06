@@ -42,16 +42,16 @@
             <tbody>
             
                 <?php
-                    if ($this->listColaboradores != null)
+                    if ($this->dados != null)
                     {
-                        foreach ($this->listColaboradores as $tupla)
+                        foreach ($this->dados as $tupla)
                         { ?>
 
                             <tr scope = "row">
 
                                 <td scope = "column"> <?php echo $tupla['nomeCompleto'] ?> </td>
                                 <td scope = "column"> <?php echo $tupla['email'] ?> </td>
-                                <td scope = "row"> <?php echo '<a href = "form-cadastro-colab.html"> <i class = "fi-pencil" id = "iConGeral"></i></a>' ?></td>
+                                <td scope = "row"> <?php echo '<a href = ""> <i class = "fi-pencil" id = "iConGeral"></i></a>' ?></td>
                                 <td scope = "row"> <?php echo '<a> <i class = "fi-x-circle" id = "iConGeral"></i></a>' ?> </td>
 
                             </tr><?php
