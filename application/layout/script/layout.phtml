@@ -29,25 +29,26 @@
         <div class="large-6 columns auth-plain">
             <div class="signup-panel left-solid">
                 <p class="welcome">Já Registrado</p>
-                <form>
+                <form class="data-abide" method="post" action="<?=$this->url(array('controller'=>'autenticacao','action'=>'index'),null,true)?>">
                 <div class="row collapse">
                     <div class="small-2  columns">
                     <span class="prefix"><i class="fi-torso"></i></span>
                 </div>
                 <div class="small-10  columns">
-                    <input type="text" name = "tUserName" id="cUserName" placeholder="Insira nome de usuário..." required pattern="[a-zA-Z]+"/>   
-                </div>    
+                    <input type="text" name = "tUserName" id="cUserName" placeholder="Insira nome de usuário..." required pattern="[a-zA-Z]+"/> 
+                </div>
+                   
                 </div>
                 <div class="row collapse">
                     <div class="small-2 columns ">
                         <span class="prefix"><i class="fi-lock"></i></span>
                     </div>
                     <div class="small-10 columns ">
-                        <input type="text" name = "tUserPassword" id="cUserPassword" placeholder="Insira a senha de usuário..." required pattern="[a-zA-Z]+"/>
+                        <input type="password" name = "tUserPassword" id="cUserPassword" placeholder="Insira a senha de usuário..."/>
                     </div>
                 </div>
+                <input type="submit" value="Login" class="button sucess radius">
                 </form>
-                <a href="#" class="button sucess radius "><b> Log In</b> </a>
                 <div class="small-12">
                     <label><a href="#"> Esqueceu sua senha?</a></label>
                 </div>
@@ -58,12 +59,12 @@
             <div class="signup-panel newusers">
                 <p class="welcome"> Novo Usuário?</p>
                 <p>Criando uma conta conosco, você conseguirá usar todos os nossos serviços e muito mais. Faça parte do Epyon você também</p><br>
-                <a href="#" class="button alert radius "> <b>Sign Up</b> </a></br>
+                <a href="#" class="button alert radius ">Sign Up</a></br>
             </div>
         </div>
 
     </div>   
-    <a class="close-reveal-modal">&#215;</a>
+        <a class="close-reveal-modal">&#215;</a>
     </div>
     
   <!-- Barra de navegação superior -->
@@ -113,21 +114,21 @@
     </div>
     
     <div class="small-6 medium-3 large-2 columns">
-      <h4>Menu</h4>
+      <h4> Saiba Mais</h4>
       <ul class="footer-links">
         <li><a href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>">Home</a></li>
         <li><a href="<?=$this->url(array('controller'=>'planos','action'=>'index'),null,true)?>">Planos</a></li>
         <li><a href="<?=$this->url(array('controller'=>'quem-somos','action'=>'index'),null,true)?>">Quem Somos</a></li>
         <li><a href="<?=$this->url(array('controller'=>'contato','action'=>'index'),null,true)?>">Contato</a></li>
-      <ul>
+      </ul>
     </div>
     
     <div class="small-6 medium-3 large-2 columns">
-      <h4>Siga-me</h4>
+      <h4>Siga-nos em</h4>
       <ul class="footer-links">
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-      <ul>
+        <li><a href="https://www.facebook.com/profile.php?id=100004360035913">Facebook</a></li>
+        <li><a href="https://twitter.com/VersaliusSD">Twitter</a></li>
+      </ul>
     </div>
   
   </div>

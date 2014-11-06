@@ -3,21 +3,32 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/layout/script/layout.phtml</file>
-=======
             <file>file:/C:/xampp/htdocs/Epyonzf/public/css/normalize.css</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/ErrorController.php</file>
             <file>file:/C:/xampp/htdocs/Epyonzf/application/configs/application.ini</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/models/DbTable/PreCliente.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/PlanosController.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/layout/script/pos-login.phtml</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/models/DbTable/ClientePJ.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/models/DbTable/Cidade.php</file>
             <file>file:/C:/xampp/htdocs/Epyonzf/application/views/scripts/quem-somos/index.phtml</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/layout/script/layout.phtml</file>
             <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/QuemSomosController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/public/css/foundation.min.css</file>
             <file>file:/C:/xampp/htdocs/Epyonzf/application/views/scripts/planos/index.phtml</file>
             <file>file:/C:/xampp/htdocs/Epyonzf/application/views/scripts/index/index.phtml</file>
             <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/IndexController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/PlanosController.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/models/DbTable/EspecifProjetos.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/ClienteController.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/models/DbTable/Cliente.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/models/DbTable/Login.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/views/scripts/cliente/index.phtml</file>
             <file>file:/C:/xampp/htdocs/Epyonzf/public/css/foundation.css</file>
->>>>>>> c7477ee958321939247e2a7096df3b3e113f936d
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/ContatoController.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/layout/script/layout.phtml</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/views/scripts/contato/index.phtml</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/public/css/foundation.min.css</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/models/DbTable/Estimativas.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/models/Pais.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/models/DbTable/DadosCartao.php</file>
         </group>
     </open-files>
 </project-private>

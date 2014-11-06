@@ -6305,7 +6305,7 @@ ul.pricing-table i { display: inline-block; margin-right: 5px; }
   font-size: emCalc(14px);
 }
 .path-container .path-item .circle {
-  background-color: #C30;
+  background-color: #F30;
   background-size: 156px 156px;
   border-radius: 50%;
   width: 156px;
@@ -6321,11 +6321,11 @@ ul.pricing-table i { display: inline-block; margin-right: 5px; }
   right: -10px;
 }
 .path-container .line {
-  background: #C60;
+  background: #CCC;
   width: 2px;
   bottom: 0;
   position: absolute;
-  top: 160px;
+  top: 200px;
   left: 50%;
   z-index: 0;
   height: 1164px;
