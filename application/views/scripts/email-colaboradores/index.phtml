@@ -1,0 +1,71 @@
+<div class = "row">
+
+      <div class = "small-10 columns small-centered">
+      
+      <fieldset class = "panel radius" id = "fieldPadrao">
+
+          <div class = "small-10 columns small-centered panel radius">
+
+            <div class = "small-11 columns">
+
+              <h3 id = "topo"> Colaboradores </h3>
+
+            </div>
+
+            <div class = "small-1 columns">
+
+              <a href = "<?=$this->url(array('controller'=>'cadastro-colaboradores','action'=>'index'),null,true)?>"> <i class = "fi-plus" id = "iConGeral"></i></a>
+
+            </div>
+
+            <hr />
+
+          </div><br>
+
+          <table class = "small-10 columns small-centered">
+
+            <caption> Tabela de Colaboradores </caption>
+            
+            <thead>
+              
+              <tr scope = "row">
+                
+                <th scope = "column"> Nome </th>
+                <th scope = "column"> E-mail </th>
+                <th scope = "column"> Editar </th>
+                <th scope = "column"> Excluir </th>
+
+              </tr>
+
+            </thead>
+          
+            <tbody>
+            
+                <?php
+                    if ($this->listColaboradores != null)
+                    {
+                        foreach ($this->listColaboradores as $tupla)
+                        { ?>
+
+                            <tr scope = "row">
+
+                                <td scope = "column"> <?php echo $tupla['nomeCompleto'] ?> </td>
+                                <td scope = "column"> <?php echo $tupla['email'] ?> </td>
+                                <td scope = "row"> <?php echo '<a href = "form-cadastro-colab.html"> <i class = "fi-pencil" id = "iConGeral"></i></a>' ?></td>
+                                <td scope = "row"> <?php echo '<a> <i class = "fi-x-circle" id = "iConGeral"></i></a>' ?> </td>
+
+                            </tr><?php
+
+                        }
+                    }
+                ?>
+                
+            </tbody>  
+
+          </table>
+
+        </fieldset>
+
+      </div>
+
+    </div>

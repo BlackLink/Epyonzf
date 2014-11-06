@@ -1,0 +1,674 @@
+
+
+    <div class = "row">
+      
+      <div class = "small-10 columns small-centered">
+
+        <form data-abide>
+
+          <fieldset class = "panel radius" id = "fieldPadrao">
+
+            <div class = "panel radius">
+
+                <div class = "small-12 columns">
+
+                  <h3 id = "topo"> Cadastro do Projeto </h3>
+
+                </div>
+                
+                <hr />
+
+            </div>
+            
+            <!-- Linha dos Tipos de Projeto -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns">
+
+                  <fieldset class = "panel radius" id = "fieldPadrao">
+
+                  <legend> Tipo de Projeto </legend>
+
+                  <!-- Campo Desktop -->
+
+                  <div class = "small-4 columns">
+
+                      <input type = "radio" name = "tRadio" id = "cRadioDesk" value = "desktop"/>
+                      <label> <b> Desktop </b> </label>
+
+                  </div>
+
+                  <!-- Campo Mobile -->
+
+                  
+                  <div class = "small-4 columns">
+
+                      <input type = "radio" name = "tRadio" id = "cRadioMobile" value = "mobile"/>
+                      <label> <b> Mobile </b> </label>
+
+                  </div>
+
+                  <!-- Campo Web -->
+
+                  <div class = "small-4 columns">
+
+                      <input type = "radio" name = "tRadio" id = "cRadioWeb" value = "web"/>
+                      <label> <b> Web </b> </label>
+
+                  </div>
+
+              </fieldset>
+            </div>  
+
+            </div>
+
+            <!-- Campo Nome do Projeto -->
+
+            <div class = "row">
+
+                <div class = "small-12 columns">
+
+                  <label>
+
+                    <b>Título</b>
+
+                    <input type = "text" name = "tNomeProjeto" id = "cNomeProjeto" 
+                    required pattern = "[a-zA-Z]+" placeholder = "Insira o título do projeto..."/>
+                    <small class = "error"> Preencha o campo corretamente </small>
+
+                  </label>
+
+                </div>
+
+            </div>
+
+            <!-- Campo Nome do Projeto -->
+
+            <div class = "row">
+
+                  <div class = "small-6 columns">
+
+                    <label>
+
+                      <b> Data Início</b>
+
+                      <input type = "date" name = "tDataIni" id = "cDataIni" placeholder = "ex.: 99/99/9999"/>
+
+                    </label>
+
+                  </div>
+                  
+
+                  <div class = "small-6 columns">
+
+                    <label>
+
+                      <b> Data Fim</b>
+
+                      <input type = "date" name = "tDataFim" id = "cDataFim" placeholder = "ex.: 99/99/9999"/>
+
+                    </label>
+
+                  </div>
+
+            </div>
+
+
+            <div class = "row" >
+
+              <div class = "small-12 columns">
+
+                <label>
+
+                  <b> Descrição do projeto </b>
+
+                  <textarea placeholder = "Descrição breve sobre o projeto..." id = "cTxtAreaProj"> </textarea>
+                  
+                </label>
+
+              </div>
+
+            </div>
+
+          </fieldset>
+
+          <!-- Dados Brutos -->
+
+          <fieldset class = "panel radius" id = "fieldPadrao">
+
+            <div class = "panel radius">
+
+                <div class = "small-12 columns">
+
+                  <h3 id = "topo"> Dados Brutos do Projeto </h3>
+
+                </div>
+                
+                <hr />
+
+            </div>
+
+            <div class = "row">
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <!-- step = "any" -->
+                  <b> Nº Casos de Uso </b>
+
+                  <input type = "text" name = "tNumCasoUso" id = "cNumCasoUso" required pattern = "[0-9]"
+                  placeholder = "Nº de casos de uso..." />
+                  <small class = "error">  Valor inválido  </small>
+
+                </label>
+
+              </div>
+
+              <!-- Nº Fluxos Casos de Usos -->
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <!-- step = "any" -->
+                  <b> Fluxos dos casos de Uso </b>
+
+                  <input type = "text" name = "tFluxoCasoUso" id = "cFluxoCasoUso" required pattern = "[0-9]"
+                  placeholder = "Fluxos casos de uso..." />
+                  <small class = "error">  Valor inválido  </small>
+
+                </label>
+
+              </div>
+
+              <!-- Nº Linhas Casos de Usos -->
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <!-- step = "any" -->
+                  <b> Linhas de casos de Uso </b>
+
+                  <input type = "text" name = "tLinhaCasoUso" id = "cLinhaCasoUso" required pattern = "[0-9]"
+                  placeholder = "Linhas casos de uso..." />
+                  <small class = "error">  Valor inválido  </small>
+
+                </label>
+
+              </div>
+
+            </div>
+
+            <div class = "row">
+
+              <!-- Campo Nº Interfaces -->
+
+              <div class = "small-4 columns">
+
+                <label>
+                  
+                  <b> Nº de Interfaces </b>
+
+                  <input type = "text" name = "tNumInterface" id = "cNumInterface" required pattern = "[0-9]"
+                  placeholder = "Nº de Interfaces..." />
+                  <small class = "error">  Valor inválido  </small>
+
+                </label>                
+
+              </div>
+
+              <!-- Campo Sub-Interfaces -->
+
+              <div class = "small-4 columns">
+
+                <label>
+                  
+                  <b> Nº de Sub-interfaces </b>
+
+                  <input type = "text" name = "tNumSubInterface" id = "cNumSubInterface" required pattern = "[0-9]"
+                  placeholder = "Nº de Sub-interfaces..." />
+                  <small class = "error">  Valor inválido  </small>
+
+                </label>                
+
+              </div>
+
+              <!-- Campo Elementos Interfaces -->
+
+              <div class = "small-4 columns">
+
+                <label>
+                  
+                  <b> Nº de Elem de Interfaces </b>
+
+                  <input type = "text" name = "tNumSubInterface" id = "cNumSubInterface" required pattern = "[0-9]"
+                  placeholder = "Nº de Elementos..." />
+                  <small class = "error">  Valor inválido  </small>
+
+                </label>
+
+              </div>
+
+            </div>
+
+            <div class = "row">
+
+              <div class = "small-4 columns">
+
+                <label>
+                  
+                  <b> Nº Mod. de Usuários </b>
+
+                  <input type = "text" name = "tNumModUsers" id = "cNumModUsers" required pattern = "[0-9]"
+                  placeholder = "Nº Modificações..." />
+                  <small class = "error">  Valor inválido  </small>
+
+                </label>
+
+
+              </div>
+
+              <div class = "small-4 columns">
+
+                <label>
+                  
+                  <b> Nº de Saídas </b>
+
+                  <input type = "text" name = "tNumModUsers" id = "cNumModUsers" required pattern = "[0-9]"
+                  placeholder = "Nº de Saídas..." />
+                  <small class = "error">  Valor inválido  </small>
+
+                </label>
+
+              </div>
+
+              <div class = "small-4 columns">
+
+                <label>
+                  
+                  <b> Nº Geradores Resultados </b>
+
+                  <input type = "text" name = "tNumModUsers" id = "cNumModUsers" required pattern = "[0-9]"
+                  placeholder = "Nº Ger. Resultados..." />
+                  <small class = "error">  Valor inválido </small>
+
+                </label>
+
+              </div>
+
+            </div>
+            
+            <div class = "row">
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <b>Outros Custos</b>
+
+                  <input type = "text" name = "tOutrosCustos" id = "cOutrosCustos"
+                  placeholder = "Outros custos..." required pattern = "[0-9]"/>
+
+                  <small class = "error"> Valor inválido </small>
+
+                </label>
+
+              </div>
+
+            </div>
+            
+            <div class = "row">
+
+              <div class = "small-12 columns">
+
+                <fieldset>
+
+                  <legend> Nível dos Desenvolvedores </legend>
+
+                  <div class = "small-2 columns">
+                    
+                    <label>
+
+                      <b> Nível 5 </b>
+
+                      <input type = "text" name = "tDesenNivel5" id = "cDesenNivel5"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                  <div class = "small-2 columns">
+                    
+                    <label>
+
+                      <b> Nível 4 </b>
+
+                      <input type = "text" name = "tDesenNivel4" id = "cDesenNivel4"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                  <div class = "small-2 columns">
+                    
+                    <label>
+
+                      <b> Nível 3 </b>
+
+                      <input type = "text" name = "tDesenNivel3" id = "cDesenNivel3"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                  <div class = "small-2 columns">
+                    
+                    <label>
+
+                      <b> Nível 2 </b>
+
+                      <input type = "text" name = "tDesenNivel2" id = "cDesenNivel2"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                  <div class = "small-2 columns end">
+                    
+                    <label>
+
+                      <b> Nível 1 </b>
+
+                      <input type = "text" name = "tDesenNivel1" id = "cDesenNivel1"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                </fieldset>  
+
+              </div>
+
+            </div>
+
+              <!-- -->
+
+              <div class = "row">
+
+              <div class = "small-12 columns">
+
+                <fieldset>
+
+                  <legend> Quantidade de Horas por Desenvolvedor </legend>
+
+                  <div class = "small-2 columns">
+                    
+                    <label>
+
+                      <b> Nível 5 </b>
+
+                      <input type = "text" name = "tHoraNivel5" id = "cHoraNivel5"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                  <div class = "small-2 columns">
+                    
+                    <label>
+
+                      <b> Nível 4 </b>
+
+                      <input type = "text" name = "tHoraNivel4" id = "cHoraNivel4"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                  <div class = "small-2 columns">
+                    
+                    <label>
+
+                      <b> Nível 3 </b>
+
+                      <input type = "text" name = "tHoraNivel3" id = "cHoraNivel3"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                  <div class = "small-2 columns">
+                    
+                    <label>
+
+                      <b> Nível 2 </b>
+
+                      <input type = "text" name = "tHoraNivel2" id = "cHoraNivel2"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                  <div class = "small-2 columns end">
+                    
+                    <label>
+
+                      <b> Nível 1 </b>
+
+                      <input type = "text" name = "tHoraNivel1" id = "cHoraNivel1"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                </fieldset>  
+
+              </div>
+
+            </div>
+
+            <!-- -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns">
+
+                <fieldset>
+
+                  <legend> Valor da Hora por Desenvolvedor </legend>
+
+                  <div class = "small-2 columns">
+                    
+                    <label>
+
+                      <b> Nível 5 </b>
+
+                      <input type = "text" name = "tValorNivel5" id = "cValorNivel5"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                  <div class = "small-2 columns">
+                    
+                    <label>
+
+                      <b> Nível 4 </b>
+
+                      <input type = "text" name = "tValorNivel4" id = "cValorNivel4"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                  <div class = "small-2 columns">
+                    
+                    <label>
+
+                      <b> Nível 3 </b>
+
+                      <input type = "text" name = "tValorNivel3" id = "cValorNivel3"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                  <div class = "small-2 columns">
+                    
+                    <label>
+
+                      <b> Nível 2 </b>
+
+                      <input type = "text" name = "tValorNivel2" id = "cValorNivel2"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                  <div class = "small-2 columns end">
+                    
+                    <label>
+
+                      <b> Nível 1 </b>
+
+                      <input type = "text" name = "tValorNivel1" id = "cValorNivel1"
+                      required pattern = "[0-9]+"/>
+                      <small class = "error">Valor inválido </small>
+
+                    </label>
+                    
+                  </div>
+
+                </fieldset>  
+
+              </div>
+
+            </div>
+
+          </fieldset>
+
+          <div class = "row">
+
+          <div class = "small-12 columns">
+
+            <fieldset class = "panel radius" id="fieldPadrao">
+
+                <div class = "panel radius">
+
+                    <div class = "small-12 columns">
+
+                      <h3 id = "topo"> Cadastro do Projeto </h3>
+
+                    </div>
+
+                    <hr />
+
+                </div>
+              
+              <!-- Campo Esforço fornecido pelo usuário -->
+              
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <b> Esforço </b>
+
+                  <input type = "text" name = "tExtraEsf" id = "cExtraEsf"
+                  placeholder = "Esforço"/>
+
+                </label>
+
+              </div>
+
+              <!-- Campo Custo fornecido pelo usuário -->
+              
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <b> Custo </b>
+
+                  <input type = "text" name = "tExtraCusto" id = "cExtraCusto"
+                  placeholder = "Custo"/>
+
+                </label>
+
+              </div>
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <b> Tempo </b>
+
+                  <input type = "text" name = "tExtraTempo" id = "cExtraTempo"
+                  placeholder = "Tempo"/>
+
+                </label>
+
+              </div>
+
+            </fieldset>
+
+          </div>
+
+        </div>
+
+        </form>
+
+        <!-- Botões -->
+
+        <div class = "row">
+
+          <!-- Botão Cancelar -->
+
+            <div class = "small-10 columns">
+
+              <a href="#" class = "button alert small large radius right"> Cancelar</a>
+
+            </div>
+
+            <!-- Botão Cadastrar -->
+
+            <div class = "small-2 columns clearfix">
+
+              <a href="#" class = "button success small large radius right"> Cadastrar</a>
+
+            </div>
+          
+        </div>
+
+      </div>
+
+    </div>

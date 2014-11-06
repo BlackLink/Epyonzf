@@ -1657,7 +1657,7 @@ fieldset {
   margin: 1.125rem 0; }
   fieldset legend {
     font-weight: bold;
-    background: white;
+    background: #f2f2f2;
     padding: 0 0.1875rem;
     margin: 0;
     margin-left: -0.1875rem; }
@@ -6380,4 +6380,23 @@ ul.pricing-table i { display: inline-block; margin-right: 5px; }
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+/* Daqui para baixo são alterações extras */
+	
+i#iConGeral
+{
+	font-size: 25px;
+}
+
+fieldset#fieldPadrao
+{
+	background: #B5B5B5;
+}
+
+textarea#cTxtAreaProj
+{
+	height: 150px;
+	min-height: 50px;
+	resize: none;
 }
