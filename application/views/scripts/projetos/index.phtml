@@ -29,7 +29,7 @@
               <tr scope = "row">
                 
                 <th scope = "column"> Projeto </th>
-                <th scope = "column"> Estimativas </th>
+                <th scope = "column"> Tipo Projeto </th>
                 <th scope = "column"> Editar </th>
                 <th scope = "column"> Excluir </th>
 
@@ -39,7 +39,24 @@
           
             <tbody>
             
-                
+                <?php
+                    if ($this->dados != null)
+                    {
+                        foreach ($this->dados as $tupla)
+                        { ?>
+
+                            <tr scope = "row">
+
+                                <td scope = "column"> <?php echo $tupla['nome'] ?> </td>
+                                <td scope = "column"> <?php echo $tupla['descricao'] ?> </td>
+                                <td scope = "row"> <?php echo '<a href = "'.$this->url(array('controller'=>'cadastro-projetos','action'=>'recupera','idProjeto'=>$tupla['idProjetos']),null,true).'"> <i class = "fi-pencil" id = "iConGeral"></i></a>';?></td>
+                                <td scope = "row"> <?php echo '<a href = "'.$this->url(array('controller'=>'cadastro-projetos','action'=>'delete','idProjeto'=>$tupla['idProjetos']),null,true).'"> <i class = "fi-x-circle" id = "iConGeral"></i></a>';?></td>
+
+                            </tr><?php
+
+                        }
+                    }
+                ?>
 
             </tbody>  
 

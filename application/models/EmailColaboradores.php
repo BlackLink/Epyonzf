@@ -17,7 +17,7 @@ class Application_Model_EmailColaboradores
    public function selectColaborador($where = null, $order = null, $limit = null)
    {
       $dao = new Application_Model_DbTable_EmailColaboradores();
-      $select = $dao->select()->from($dao)->order($order)->limit($limit);
+      $select = $dao->select()->from($dao)->order('nomeCompleto')->limit($limit);
       if(!is_null($where)){
          $select->where($where);
       }

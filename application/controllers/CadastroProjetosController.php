@@ -20,13 +20,22 @@ class CadastroProjetosController extends Zend_Controller_Action
             $this->usuario = get_object_vars($identity);
         }
        
+        $this->_helper->layout->setLayout('pos-login');
     }
 
     public function indexAction()
     {
-        $this->_helper->layout->setLayout('pos-login');
+        
     }
-
+    
+    public function recuperaAction ()
+    {
+        $dadosColaborador = new Application_Model_EmailCadastroColaboradores();
+        $idProj = $this->getParam('idProjeto');
+        $dados = $dadosColaborador->selectColaborador($idProj);
+        $this->view->assign("idProjGet", $idProj);
+        $this->view->assign("dados", $dados);
+    }
 
 }
 

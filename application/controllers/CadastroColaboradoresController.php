@@ -20,11 +20,37 @@ class CadastroColaboradoresController extends Zend_Controller_Action
             $this->usuario = get_object_vars($identity);
         }
         
+        $this->_helper->layout->setLayout('pos-login');
     }
 
     public function indexAction()
     {
-        $this->_helper->layout->setLayout('pos-login');
+        
     }    
+    
+    public function recuperaAction ()
+    {
+        $dadosColaborador = new Application_Model_EmailCadastroColaboradores();
+        $idCol = $this->getParam('idCol');
+        $dados = $dadosColaborador->selectColaborador($idCol);
+        $this->view->assign("idColGet", $idCol);
+        $this->view->assign("dados", $dados);
+    }
+    
+    public function updateAction()
+    {
+        $dados = $this->_getAllParams(); 
+        $dadosColaborador = new Application_Model_EmailCadastroColaboradores();
+        $dadosColaborador->updateColaborador($dados);
+        $this->redirect("/email-colaboradores");
+    }
+    
+    public function deleteAction ()
+    {
+        $dados = $this->getParam('idCol');
+        $dadosColaborador = new Application_Model_EmailCadastroColaboradores();
+        $dadosColaborador->deleteColaborador($dados);
+        $this->redirect('/email-colaboradores');
+    }
 }
 

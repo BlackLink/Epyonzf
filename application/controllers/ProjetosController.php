@@ -20,11 +20,15 @@ class ProjetosController extends Zend_Controller_Action
             $this->usuario = get_object_vars($identity);
         }
         
+        $this->_helper->layout->setLayout('pos-login');
+        
     }
 
     public function indexAction()
     {
-        $this->_helper->layout->setLayout('pos-login');
+        $db = new Application_Model_Projetos;
+        $dados = $db->selectProjeto($where=null, $order=null, $limit=null);
+        $this->view->assign("dados", $dados);
     }
 
 

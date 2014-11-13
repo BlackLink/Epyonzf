@@ -2,11 +2,6 @@
 
 class EmailColaboradoresController extends Zend_Controller_Action
 {
-    private $nomeColaborador = null;
-    private $emailColaborador = null;
-    private $identColaborador = null;
-    private $idUser = null;
-    private $userName = null;
     var $usuario;
     
     public function init()

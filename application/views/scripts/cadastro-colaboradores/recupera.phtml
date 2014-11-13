@@ -2,7 +2,7 @@
 
         <div class = "small-10 columns small-centered">
 
-            <form data-abide method="POST" action="<?=$this->url(array('controller'=>'email-colaboradores','action'=>'inserir'),null,true)?>">
+            <form data-abide method="POST" action="<?=$this->url(array('controller'=>'cadastro-colaboradores','action'=>'update'),null,true)?>">
             
               <fieldset class = "panel radius" id = "fieldPadrao">
               
@@ -24,7 +24,7 @@
 
                   <b>Nome do Colaborador </b>
 
-                  <input type = "text" name = "tNomeColaborador" id = "cNomeColaborador"
+                  <input type = "text" name = "tNomeColaborador" value="<?=$this->dados[0]['nomeCompleto']?>" id = "cNomeColaborador"
                   placeholder = "Insira o nome do colaborador..." required pattern = "[a-zA-Z]+" />
 
                   <small class = "error"> Preencha o campo corretamente </small>
@@ -39,7 +39,7 @@
 
                   <b> E-mail </b>
 
-                  <input type = "text" name = "tEmailColaborador" id = "cEmailColaborador"
+                  <input type = "text" name = "tEmailColaborador" value="<?=$this->dados[0]['email']?>" id = "cEmailColaborador"
                   placeholder = "Insira o e-mail do colaborador" required pattern = "[a-zA-Z]+"/>
 
                   <small class = "error"> Preencha o campo corretamente </small>
@@ -68,6 +68,10 @@
               <input type = "submit" id="btnCadastrar" class = "button success small large radius right" 
                      value = "Cadastrar" name = "Cadastrar"/> 
 
+            </div>
+            
+            <div>
+                <input type="hidden" id="btnHidden" value ="<?= $this->idColGet ?>" name="tHiddenCol" />
             </div>
                 
           </form>
