@@ -48,9 +48,9 @@
                             <tr scope = "row">
 
                                 <td scope = "column"> <?php echo $tupla['nome'] ?> </td>
-                                <td scope = "column"> <?php echo $tupla['descricao'] ?> </td>
-                                <td scope = "row"> <?php echo '<a href = "'.$this->url(array('controller'=>'cadastro-projetos','action'=>'recupera','idProjeto'=>$tupla['idProjetos']),null,true).'"> <i class = "fi-pencil" id = "iConGeral"></i></a>';?></td>
-                                <td scope = "row"> <?php echo '<a href = "'.$this->url(array('controller'=>'cadastro-projetos','action'=>'delete','idProjeto'=>$tupla['idProjetos']),null,true).'"> <i class = "fi-x-circle" id = "iConGeral"></i></a>';?></td>
+                                <td scope = "column"> <?php echo $tupla['tipo_projeto'] ?> </td>
+                                <td scope = "column"> <?php echo '<a href = "'.$this->url(array('controller'=>'cadastro-projetos','action'=>'recupera','idProjeto'=>$tupla['idProjetos']),null,true).'"> <i class = "fi-pencil" id = "iConGeral"></i></a>';?></td>
+                                <td scope = "column"> <?php echo '<a href = "'.$this->url(array('controller'=>'cadastro-projetos','action'=>'delete','idProjeto'=>$tupla['idProjetos']),null,true).'"> <i class = "fi-x-circle" id = "iConGeral"></i></a>';?></td>
 
                             </tr><?php
 

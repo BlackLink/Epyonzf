@@ -4,7 +4,7 @@
       
       <div class = "small-10 columns small-centered">
 
-        <form data-abide method="POST" action="<?=$this->url(array('controller'=>'projetos','action'=>'index'),null,true)?>">
+        <form data-abide method="POST" action="<?=$this->url(array('controller'=>'cadastro-projetos','action'=>'update'),null,true)?>">
 
           <fieldset class = "panel radius" id = "fieldPadrao">
 
@@ -34,7 +34,8 @@
 
                   <div class = "small-4 columns">
 
-                      <input type = "radio" name = "tRadio" id = "cRadioDesk" value = "desktop" required/>
+                      <input type = "radio" name = "tRadio" id = "cRadioDesk" value = "Desktop" required
+                             <?php if(!strcmp($this->dados[0]['tipo_projeto'],"Desktop")){ ?> checked <?php } ?>/>
                       <label> <b> Desktop </b> </label>
                       <small class = "error"> Selecione um campo </small>
 
@@ -45,7 +46,8 @@
                   
                   <div class = "small-4 columns">
 
-                      <input type = "radio" name = "tRadio" id = "cRadioMobile" value = "mobile" required/>
+                      <input type = "radio" name = "tRadio" id = "cRadioMobile" value = "Mobile" required 
+                            <?php if(!strcmp($this->dados[0]['tipo_projeto'],"Mobile")){ ?> checked <?php } ?>/>
                       <label> <b> Mobile </b> </label>
                       <small class = "error"> Selecione um campo </small>
 
@@ -55,7 +57,8 @@
 
                   <div class = "small-4 columns">
 
-                      <input type = "radio" name = "tRadio" id = "cRadioWeb" value = "web" required/>
+                      <input type = "radio" name = "tRadio" id = "cRadioWeb" value = "Web" required
+                            <?php if(!strcmp($this->dados[0]['tipo_projeto'],"Web")){ ?> checked <?php } ?> />
                       <label> <b> Web </b> </label>
                       <small class = "error"> Selecione um campo </small>
 
@@ -77,7 +80,8 @@
                     <b>Título</b>
 
                     <input type = "text" name = "tNomeProjeto" id = "cNomeProjeto" 
-                    required pattern = "[a-zA-Z]+" placeholder = "Insira o título do projeto..."/>
+                    required pattern = "[a-zA-Z]+" placeholder = "Insira o título do projeto..."
+                    value="<?=$this->dados[0]['nome']?>"/>
                     <small class = "error"> Preencha o campo corretamente </small>
 
                   </label>
@@ -96,7 +100,8 @@
 
                       <b> Data Início</b>
 
-                      <input type = "date" name = "tDataIni" id = "cDataIni" placeholder = "ex.: 99/99/9999"/>
+                      <input type = "date" name = "tDataIni" id = "cDataIni" placeholder = "ex.: 99/99/9999"
+                            value="<?=$this->dados[0]['dataInicio']?>" />
 
                     </label>
 
@@ -109,7 +114,8 @@
 
                       <b> Data Fim</b>
 
-                      <input type = "date" name = "tDataFim" id = "cDataFim" placeholder = "ex.: 99/99/9999"/>
+                      <input type = "date" name = "tDataFim" id = "cDataFim" placeholder = "ex.: 99/99/9999"
+                             value="<?=$this->dados[0]['dataFim']?>"/>
 
                     </label>
 
@@ -126,7 +132,7 @@
 
                   <b> Descrição do projeto </b>
 
-                  <textarea placeholder = "Descrição breve sobre o projeto..." id = "cTxtAreaProj"> </textarea>
+                  <textarea placeholder = "Descrição breve sobre o projeto..." id = "cTxtAreaProj" name="tDescrProj"> <?=$this->dados[0]['descricao']?> </textarea>
                   
                 </label>
 
@@ -162,7 +168,8 @@
                   <b> Nº Casos de Uso </b>
 
                   <input type = "text" name = "tNumCasoUso" id = "cNumCasoUso" required pattern = "[0-9]"
-                  placeholder = "Nº de casos de uso..." />
+                  placeholder = "Nº de casos de uso..." 
+                  value="<?=$this->dados[0]['num_casos_usos']?>"/>
                   <small class = "error">  Valor inválido  </small>
 
                 </label>
@@ -179,7 +186,8 @@
                   <b> Fluxos dos casos de Uso </b>
 
                   <input type = "text" name = "tFluxoCasoUso" id = "cFluxoCasoUso" required pattern = "[0-9]"
-                  placeholder = "Fluxos casos de uso..." />
+                  placeholder = "Fluxos casos de uso..." 
+                  value="<?=$this->dados[0]['fluxos_casos_usos']?>"/>
                   <small class = "error">  Valor inválido  </small>
 
                 </label>
@@ -196,7 +204,8 @@
                   <b> Linhas de casos de Uso </b>
 
                   <input type = "text" name = "tLinhaCasoUso" id = "cLinhaCasoUso" required pattern = "[0-9]"
-                  placeholder = "Linhas casos de uso..." />
+                  placeholder = "Linhas casos de uso..." 
+                  value="<?=$this->dados[0]['linhas_casos_uso']?>"/>
                   <small class = "error">  Valor inválido  </small>
 
                 </label>
@@ -216,7 +225,8 @@
                   <b> Nº de Interfaces </b>
 
                   <input type = "text" name = "tNumInterface" id = "cNumInterface" required pattern = "[0-9]"
-                  placeholder = "Nº de Interfaces..." />
+                  placeholder = "Nº de Interfaces..." 
+                  value="<?=$this->dados[0]['num_interfaces']?>"/>
                   <small class = "error">  Valor inválido  </small>
 
                 </label>                
@@ -232,7 +242,8 @@
                   <b> Nº de Sub-interfaces </b>
 
                   <input type = "text" name = "tNumSubInterface" id = "cNumSubInterface" required pattern = "[0-9]"
-                  placeholder = "Nº de Sub-interfaces..." />
+                  placeholder = "Nº de Sub-interfaces..." 
+                  value="<?=$this->dados[0]['num_sub_interfaces']?>"/>
                   <small class = "error">  Valor inválido  </small>
 
                 </label>                
@@ -247,8 +258,9 @@
                   
                   <b> Nº de Elem de Interfaces </b>
 
-                  <input type = "text" name = "tNumSubInterface" id = "cNumSubInterface" required pattern = "[0-9]"
-                  placeholder = "Nº de Elementos..." />
+                  <input type = "text" name = "tNumElemInterface" id = "cNumSubInterface" required pattern = "[0-9]"
+                  placeholder = "Nº de Elementos..." 
+                  value="<?=$this->dados[0]['num_elem_interfaces']?>"/>
                   <small class = "error">  Valor inválido  </small>
 
                 </label>
@@ -266,7 +278,8 @@
                   <b> Nº Mod. de Usuários </b>
 
                   <input type = "text" name = "tNumModUsers" id = "cNumModUsers" required pattern = "[0-9]"
-                  placeholder = "Nº Modificações..." />
+                  placeholder = "Nº Modificações..." 
+                  value="<?=$this->dados[0]['num_mod_usuarios']?>"/>
                   <small class = "error">  Valor inválido  </small>
 
                 </label>
@@ -280,8 +293,9 @@
                   
                   <b> Nº de Saídas </b>
 
-                  <input type = "text" name = "tNumModUsers" id = "cNumModUsers" required pattern = "[0-9]"
-                  placeholder = "Nº de Saídas..." />
+                  <input type = "text" name = "tNumSaidas" id = "cNumModUsers" required pattern = "[0-9]"
+                  placeholder = "Nº de Saídas..." 
+                  value="<?=$this->dados[0]['num_saidas']?>"/>
                   <small class = "error">  Valor inválido  </small>
 
                 </label>
@@ -294,8 +308,9 @@
                   
                   <b> Nº Geradores Resultados </b>
 
-                  <input type = "text" name = "tNumModUsers" id = "cNumModUsers" required pattern = "[0-9]"
-                  placeholder = "Nº Ger. Resultados..." />
+                  <input type = "text" name = "tNumGeradoresResult" id = "cNumModUsers" required pattern = "[0-9]"
+                  placeholder = "Nº Ger. Resultados..." 
+                  value="<?=$this->dados[0]['num_geradores_result']?>"/>
                   <small class = "error">  Valor inválido </small>
 
                 </label>
@@ -313,7 +328,8 @@
                   <b>Outros Custos</b>
 
                   <input type = "text" name = "tOutrosCustos" id = "cOutrosCustos"
-                  placeholder = "Outros custos..." required pattern = "[0-9]"/>
+                  placeholder = "Outros custos..." required pattern = "[0-9]"
+                  value="<?=$this->dados[0]['outros_custos']?>"/>
 
                   <small class = "error"> Valor inválido </small>
 
@@ -329,7 +345,7 @@
 
                 <fieldset>
 
-                  <legend> Nível dos Desenvolvedores </legend>
+                  <legend> Quantidade de Desenvolvedores </legend>
 
                   <div class = "small-2 columns">
                     
@@ -338,7 +354,8 @@
                       <b> Nível 5 </b>
 
                       <input type = "text" name = "tDesenNivel5" id = "cDesenNivel5"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['col_nv_5']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -352,7 +369,8 @@
                       <b> Nível 4 </b>
 
                       <input type = "text" name = "tDesenNivel4" id = "cDesenNivel4"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['col_nv_4']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -366,7 +384,8 @@
                       <b> Nível 3 </b>
 
                       <input type = "text" name = "tDesenNivel3" id = "cDesenNivel3"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['col_nv_3']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -380,7 +399,8 @@
                       <b> Nível 2 </b>
 
                       <input type = "text" name = "tDesenNivel2" id = "cDesenNivel2"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['col_nv_2']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -394,7 +414,8 @@
                       <b> Nível 1 </b>
 
                       <input type = "text" name = "tDesenNivel1" id = "cDesenNivel1"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['col_nv_1']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -424,7 +445,8 @@
                       <b> Nível 5 </b>
 
                       <input type = "text" name = "tHoraNivel5" id = "cHoraNivel5"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['quant_hora_nv5']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -438,7 +460,8 @@
                       <b> Nível 4 </b>
 
                       <input type = "text" name = "tHoraNivel4" id = "cHoraNivel4"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['quant_hora_nv4']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -452,7 +475,8 @@
                       <b> Nível 3 </b>
 
                       <input type = "text" name = "tHoraNivel3" id = "cHoraNivel3"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['quant_hora_nv3']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -466,7 +490,8 @@
                       <b> Nível 2 </b>
 
                       <input type = "text" name = "tHoraNivel2" id = "cHoraNivel2"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['quant_hora_nv2']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -480,7 +505,8 @@
                       <b> Nível 1 </b>
 
                       <input type = "text" name = "tHoraNivel1" id = "cHoraNivel1"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['quant_hora_nv1']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -510,7 +536,8 @@
                       <b> Nível 5 </b>
 
                       <input type = "text" name = "tValorNivel5" id = "cValorNivel5"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['valor_hora_nv5']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -524,7 +551,8 @@
                       <b> Nível 4 </b>
 
                       <input type = "text" name = "tValorNivel4" id = "cValorNivel4"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['valor_hora_nv4']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -538,7 +566,8 @@
                       <b> Nível 3 </b>
 
                       <input type = "text" name = "tValorNivel3" id = "cValorNivel3"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['valor_hora_nv3']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -552,7 +581,8 @@
                       <b> Nível 2 </b>
 
                       <input type = "text" name = "tValorNivel2" id = "cValorNivel2"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['valor_hora_nv2']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -566,7 +596,8 @@
                       <b> Nível 1 </b>
 
                       <input type = "text" name = "tValorNivel1" id = "cValorNivel1"
-                      required pattern = "[0-9]+"/>
+                      required pattern = "[0-9]+"
+                      value="<?=$this->dados[0]['valor_hora_nv1']?>"/>
                       <small class = "error">Valor inválido </small>
 
                     </label>
@@ -608,7 +639,7 @@
                   <b> Esforço </b>
 
                   <input type = "text" name = "tExtraEsf" id = "cExtraEsf"
-                  placeholder = "Esforço"/>
+                  placeholder = "Esforço" value="<?=$this->dados[0]['esforcoUsuario']?>"/>
 
                 </label>
 
@@ -623,7 +654,7 @@
                   <b> Custo </b>
 
                   <input type = "text" name = "tExtraCusto" id = "cExtraCusto"
-                  placeholder = "Custo"/>
+                  placeholder = "Custo" value="<?=$this->dados[0]['custoUsuario']?>"/>
 
                 </label>
 
@@ -636,7 +667,7 @@
                   <b> Tempo </b>
 
                   <input type = "text" name = "tExtraTempo" id = "cExtraTempo"
-                  placeholder = "Tempo"/>
+                  placeholder = "Tempo" value="<?=$this->dados[0]['prazoUsuario']?>"/>
 
                 </label>
 
@@ -665,8 +696,12 @@
             <div class = "small-2 columns clearfix">
 
               <input type = "submit" id="btnCadastrar" class = "button success small large radius right" 
-                     value = "Cadastrar" name = "Cadastrar"/> 
+                     value = " Salvar " name = "Cadastrar"/> 
 
+            </div>
+            
+            <div>
+                <input type="hidden" id="btnHidden" value ="<?= $this->idProjGet ?>" name="tHiddenProj" />
             </div>
           
         </div>

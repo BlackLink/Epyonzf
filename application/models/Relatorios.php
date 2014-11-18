@@ -1,7 +1,8 @@
 <?php
 
-class Application_Model_CadastroProjetos
-{   
+class Application_Model_Relatorios
+{
+    
     public function selectNome ($idUser)
     {
         $db = Zend_Db_Table_Abstract::getDefaultAdapter();
@@ -24,15 +25,5 @@ class Application_Model_CadastroProjetos
             return $codClientePj;
     }  
     
-    public function selectProjeto ($idProj)
-    {
-        $db = Zend_Db_Table_Abstract::getDefaultAdapter();
-        
-        $select = $db->select()->from('projetos')
-                ->from('esp_projetos')->from('esp_desenv_proj')
-                ->where('idProjetos = '.$idProj);
-        
-        return $db->fetchAll($select);
-    }
 }
 

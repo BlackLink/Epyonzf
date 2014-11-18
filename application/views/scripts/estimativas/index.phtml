@@ -36,7 +36,25 @@
           
             <tbody>
             
-                
+                <?php
+                    if ($this->dados != null)
+                    {
+                        foreach ($this->dados as $tupla)
+                        { ?>
+
+                            <tr scope = "row">
+
+                                <td scope = "column"> <?php echo $tupla['nome'] ?> </td>
+                                <td scope = "column"> <?php echo $tupla['custo'] ?> </td>
+                                <td scope = "column"> <?php echo $tupla['tempo'] ?> </td>
+                                <td scope = "column"> <?php echo $tupla['esforco'] ?> </td>
+                                <td scope = "column"> <?php echo '<a href = "'.$this->url(array('controller'=>'cadastro-colaboradores','action'=>'delete','idEst'=>$tupla['idEstimativas']),null,true).'"> <i class = "fi-x-circle" id = "iConGeral"></i></a>';?></td>
+
+                            </tr><?php
+
+                        }
+                    }
+                ?>
 
             </tbody>  
 

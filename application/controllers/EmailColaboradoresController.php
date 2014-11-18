@@ -20,21 +20,29 @@ class EmailColaboradoresController extends Zend_Controller_Action
         }
 
         $this->_helper->layout->setLayout('pos-login');
+        $dadosUsuario = new Application_Model_EmailColaboradores();
+        $nomeUsuario = $dadosUsuario->selectNome($this->usuario['idLogin']);
+        $this->view->assign("name_user", $nomeUsuario['nome']);
         
     }
 
     public function indexAction()
     {
         $dadosColaborador = new Application_Model_EmailColaboradores();
-        $dados = $dadosColaborador->selectColaborador($where=null, $order=null, $limit=null);
+        $dados = $dadosColaborador->selectColaborador($this->usuario['idLogin']);
         $this->view->assign("dados", $dados);
     }
 
     public function inserirAction ()
     {
         $dados = $this->_getAllParams();
+        
         $dadosColaborador = new Application_Model_EmailColaboradores();
-        $dadosColaborador->insertColaborador($dados, $this->usuario['codCliente']);
+        
+        $idCliente = $dadosColaborador->selectUpColaborador($this->usuario['idLogin']);
+        
+        $dadosColaborador->insertColaborador($dados, $idCliente);
+        
         $this->redirect("/email-colaboradores");
     }
 

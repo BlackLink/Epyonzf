@@ -3,33 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/views/scripts/error/error.phtml</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/ErrorController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/configs/application.ini</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/models/EmailColaboradores.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/ProjetosController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/layout/script/pos-login.phtml</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/PlanosController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/EnvioRelatoriosController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/views/scripts/cadastro-cliente/index.phtml</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/views/scripts/planos/index.phtml</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/IndexController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/views/scripts/index/index.phtml</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/views/scripts/error-login/index.phtml</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/ClienteController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/CadastroColaboradoresController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/models/AutenticacaoUsuario.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/views/scripts/cadastro-projetos/recupera.phtml</file>
             <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/CadastroProjetosController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/ErrorLoginController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/RelatoriosController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/public/css/foundation.css</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/ContatoController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/layout/script/layout.phtml</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/views/scripts/contato/index.phtml</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/EmailColaboradoresController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/AutenticacaoController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/EstimativasController.php</file>
-            <file>file:/C:/xampp/htdocs/Epyonzf/application/controllers/PosLoginController.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/models/Projetos.php</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/views/scripts/projetos/index.phtml</file>
+            <file>file:/C:/xampp/htdocs/Epyonzf/application/models/EmailCadastroColaboradores.php</file>
         </group>
     </open-files>
 </project-private>

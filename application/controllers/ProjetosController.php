@@ -21,16 +21,27 @@ class ProjetosController extends Zend_Controller_Action
         }
         
         $this->_helper->layout->setLayout('pos-login');
-        
+        $dadosUsuario = new Application_Model_PosLogin();
+        $nomeUsuario = $dadosUsuario->selectNome($this->usuario['idLogin']);
+        $this->view->assign("name_user", $nomeUsuario['nome']);
     }
 
     public function indexAction()
     {
         $db = new Application_Model_Projetos;
-        $dados = $db->selectProjeto($where=null, $order=null, $limit=null);
+        $dados = $db->selectProjeto($this->usuario['idLogin']);
         $this->view->assign("dados", $dados);
     }
 
-
+    public function inserirAction ()
+    {
+        $dados = $this->_getAllParams();
+        
+        $dbProj = new Application_Model_Projetos();
+        
+        $dbProj->insertProjeto($dados, $this->usuario['idLogin']);
+        
+        $this->redirect("/projetos");
+    }
 }
 

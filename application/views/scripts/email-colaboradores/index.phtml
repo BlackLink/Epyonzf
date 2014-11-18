@@ -51,8 +51,8 @@
 
                                 <td scope = "column"> <?php echo $tupla['nomeCompleto'] ?> </td>
                                 <td scope = "column"> <?php echo $tupla['email'] ?> </td>
-                                <td scope = "row"> <?php echo '<a href = "'.$this->url(array('controller'=>'cadastro-colaboradores','action'=>'recupera','idCol'=>$tupla['idEmail-Colaboradores']),null,true).'"> <i class = "fi-pencil" id = "iConGeral"></i></a>';?></td>
-                                <td scope = "row"> <?php echo '<a href = "'.$this->url(array('controller'=>'cadastro-colaboradores','action'=>'delete','idCol'=>$tupla['idEmail-Colaboradores']),null,true).'"> <i class = "fi-x-circle" id = "iConGeral"></i></a>';?></td>
+                                <td scope = "column"> <?php echo '<a href = "'.$this->url(array('controller'=>'cadastro-colaboradores','action'=>'recupera','idCol'=>$tupla['idEmail-Colaboradores']),null,true).'"> <i class = "fi-pencil" id = "iConGeral"></i></a>';?></td>
+                                <td scope = "column"> <?php echo '<a href = "'.$this->url(array('controller'=>'cadastro-colaboradores','action'=>'delete','idCol'=>$tupla['idEmail-Colaboradores']),null,true).'"> <i class = "fi-x-circle" id = "iConGeral"></i></a>';?></td>
 
                             </tr><?php
 

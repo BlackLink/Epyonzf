@@ -19,12 +19,15 @@ class RelatoriosController extends Zend_Controller_Action
             $identity = $auth->getIdentity();
             $this->usuario = get_object_vars($identity);
         }
-        
+        $this->_helper->layout->setLayout('pos-login');
+        $dadosUsuario = new Application_Model_Relatorios();
+        $nomeUsuario = $dadosUsuario->selectNome($this->usuario['idLogin']);
+        $this->view->assign("name_user", $nomeUsuario['nome']);
     }
 
     public function indexAction()
     {
-        $this->_helper->layout->setLayout('pos-login');
+        
     }
 
 

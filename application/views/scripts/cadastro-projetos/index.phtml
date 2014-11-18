@@ -4,7 +4,7 @@
       
       <div class = "small-10 columns small-centered">
 
-        <form data-abide method="POST" action="<?=$this->url(array('controller'=>'projetos','action'=>'index'),null,true)?>">
+        <form data-abide method="POST" action="<?=$this->url(array('controller'=>'projetos','action'=>'inserir'),null,true)?>">
 
           <fieldset class = "panel radius" id = "fieldPadrao">
 
@@ -34,7 +34,7 @@
 
                   <div class = "small-4 columns">
 
-                      <input type = "radio" name = "tRadio" id = "cRadioDesk" value = "desktop" required/>
+                      <input type = "radio" name = "tRadio" id = "cRadioDesk" value = "Desktop" required/>
                       <label> <b> Desktop </b> </label>
                       <small class = "error"> Selecione um campo </small>
 
@@ -45,7 +45,7 @@
                   
                   <div class = "small-4 columns">
 
-                      <input type = "radio" name = "tRadio" id = "cRadioMobile" value = "mobile" required/>
+                      <input type = "radio" name = "tRadio" id = "cRadioMobile" value = "Mobile" required/>
                       <label> <b> Mobile </b> </label>
                       <small class = "error"> Selecione um campo </small>
 
@@ -55,7 +55,7 @@
 
                   <div class = "small-4 columns">
 
-                      <input type = "radio" name = "tRadio" id = "cRadioWeb" value = "web" required/>
+                      <input type = "radio" name = "tRadio" id = "cRadioWeb" value = "Web" required/>
                       <label> <b> Web </b> </label>
                       <small class = "error"> Selecione um campo </small>
 
@@ -126,7 +126,7 @@
 
                   <b> Descrição do projeto </b>
 
-                  <textarea placeholder = "Descrição breve sobre o projeto..." id = "cTxtAreaProj"> </textarea>
+                  <textarea name = "tDescrProj" placeholder = "Descrição breve sobre o projeto..." id = "cTxtAreaProj" > </textarea>
                   
                 </label>
 
@@ -247,7 +247,7 @@
                   
                   <b> Nº de Elem de Interfaces </b>
 
-                  <input type = "text" name = "tNumSubInterface" id = "cNumSubInterface" required pattern = "[0-9]"
+                  <input type = "text" name = "tNumElemInterface" id = "cNumSubInterface" required pattern = "[0-9]"
                   placeholder = "Nº de Elementos..." />
                   <small class = "error">  Valor inválido  </small>
 
@@ -280,7 +280,7 @@
                   
                   <b> Nº de Saídas </b>
 
-                  <input type = "text" name = "tNumModUsers" id = "cNumModUsers" required pattern = "[0-9]"
+                  <input type = "text" name = "tNumSaidas" id = "cNumModUsers" required pattern = "[0-9]"
                   placeholder = "Nº de Saídas..." />
                   <small class = "error">  Valor inválido  </small>
 
@@ -294,7 +294,7 @@
                   
                   <b> Nº Geradores Resultados </b>
 
-                  <input type = "text" name = "tNumModUsers" id = "cNumModUsers" required pattern = "[0-9]"
+                  <input type = "text" name = "tNumGeradoresResult" id = "cNumModUsers" required pattern = "[0-9]"
                   placeholder = "Nº Ger. Resultados..." />
                   <small class = "error">  Valor inválido </small>
 
@@ -329,7 +329,7 @@
 
                 <fieldset>
 
-                  <legend> Nível dos Desenvolvedores </legend>
+                  <legend> Quantidade de Desenvolvedores </legend>
 
                   <div class = "small-2 columns">
                     
