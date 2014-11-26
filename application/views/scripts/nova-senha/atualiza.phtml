@@ -1,0 +1,52 @@
+
+
+<div class = "row">
+        
+    <?php
+        
+        if ($this->status == 1)
+        { 
+         ?>
+        <script>
+            alert("Senha alterada com sucesso!");
+            location.href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>";
+        </script>
+            
+        <?php
+        }
+        else 
+        {   ?>
+           <script>
+                alert("Usuário ou senha inválidos, tente novamente!");
+                history.go(-1);
+            </script>
+        <?php
+        };
+        ?>
+
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /><br />
+<br />
+<br />
+<br /><br />
+<br />
+<br />
+<br /><br />
+<br />
+<br />
+<br /><br />
+<br />
+<br />
+<br /><br />
+<br />
+<br />
+<br /><br />
+<br />

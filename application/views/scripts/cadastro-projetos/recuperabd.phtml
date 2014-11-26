@@ -1,0 +1,243 @@
+<div class = "row">
+
+    <div class = "small-10 columns small-centered">
+
+        <form data-abide method="POST" action="<?= $this->url(array('controller' => 'cadastro-projetos', 'action' => 'updatebd'), null, true) ?>">
+            
+            <fieldset class = "panel radius" id = "fieldPadrao">
+
+                <div class = "panel radius">
+
+                    <div class = "small-12 columns">
+
+                        <h3 id = "topo"> Cadastro do Projeto </h3>
+
+                    </div>
+
+                    <hr />
+
+                </div>
+                
+                <div class = "row">
+
+              <div class = "small-12 columns">
+
+                  <fieldset class = "panel radius" id = "fieldPadrao">
+
+                  <legend> Tipo de Projeto </legend>
+
+                  <!-- Campo Desktop -->
+
+                  <div class = "small-4 columns">
+
+                      <input type = "radio" name = "tRadio" id = "cRadioDesk" value = "Desktop" required
+                             <?php if(!strcmp($this->dados['tipo_projeto'],"Desktop")){ ?> checked <?php } ?>/>
+                      <label> <b> Desktop </b> </label>
+                      <small class = "error"> Selecione um campo </small>
+
+                  </div>
+
+                  <!-- Campo Mobile -->
+
+                  
+                  <div class = "small-4 columns">
+
+                      <input type = "radio" name = "tRadio" id = "cRadioMobile" value = "Mobile" required
+                             <?php if(!strcmp($this->dados['tipo_projeto'],"Mobile")){ ?> checked <?php } ?>/>
+                      <label> <b> Mobile </b> </label>
+                      <small class = "error"> Selecione um campo </small>
+
+                  </div>
+
+                  <!-- Campo Web -->
+
+                  <div class = "small-4 columns">
+
+                      <input type = "radio" name = "tRadio" id = "cRadioWeb" value = "Web" required
+                             <?php if(!strcmp($this->dados['tipo_projeto'],"Web")){ ?> checked <?php } ?>/>
+                      <label> <b> Web </b> </label>
+                      <small class = "error"> Selecione um campo </small>
+
+                  </div>
+
+              </fieldset>
+            </div>  
+
+            </div>
+
+                <div class="row">
+
+                    <div class="small-12 columns">
+                        <fieldset>
+                            <p>
+                                <b>
+                                    Obs: Para realizar a estimativa forneça os pontos de função e pelo menos
+                                    dois dos outros campos.
+                                </b>
+                            </p>
+                        </fieldset>
+                    </div>
+
+                </div>
+                
+                <div class = "row">
+
+                    <div class = "small-12 columns">
+
+                      <label>
+
+                        <b>Título</b>
+
+                        <input type = "text" name = "tNome" id = "cNomeProjeto" 
+                        required pattern = "[a-zA-Z]+" placeholder = "Insira o título do projeto..."
+                        value="<?= $this->dados['nome']?>"/>
+                        <small class = "error"> Preencha o campo corretamente </small>
+
+                      </label>
+
+                    </div>
+
+                </div>
+                
+                <div class = "row">
+
+                  <div class = "small-6 columns">
+
+                    <label>
+
+                      <b> Data Início</b>
+
+                      <input type = "date" name = "tDataIni" id = "cDataIni" placeholder = "ex.: 99/99/9999"
+                             value="<?= $this->dados['dataIni']?>"/>
+
+                    </label>
+
+                  </div>
+                  
+
+                  <div class = "small-6 columns">
+
+                    <label>
+
+                      <b> Data Fim</b>
+
+                      <input type = "date" name = "tDataFim" id = "cDataFim" placeholder = "ex.: 99/99/9999"
+                             value="<?= $this->dados['dataFim']?>"/>
+
+                    </label>
+
+                  </div>
+
+            </div>
+
+
+            <div class = "row" >
+
+              <div class = "small-12 columns">
+
+                <label>
+
+                  <b> Descrição do projeto </b>
+
+                  <textarea name = "tDescrProj" placeholder = "Descrição breve sobre o projeto..." id = "cTxtAreaProj"> <?= $this->dados['descricao']?></textarea>
+                  
+                </label>
+
+              </div>
+
+            </div>
+                
+                <div class = "row">
+
+                        <div class = "small-3 columns">
+
+                            <label>
+
+                                <!-- step = "any" -->
+                                <b> Pontos de Função </b>
+
+                                <input type = "text" name = "tPF" id = "cPF" required pattern = "[0-9]"
+                                       placeholder = "pontos de função..." value="<?= $this->dados['pf']?>"/>
+                                <small class = "error">  Valor inválido  </small>
+
+                            </label>
+
+                        </div>
+
+                        <div class = "small-3 columns">
+
+                            <label>
+
+                                <!-- step = "any" -->
+                                <b> Custo </b>
+
+                                <input type = "text" name = "tCusto" id = "cCusto" pattern = "[0-9]"
+                                       placeholder = "custo..." value="<?= $this->dados['custo']?>"/>
+                                <small class = "error">  Valor inválido  </small>
+
+                            </label>
+
+                        </div>
+
+                        <div class = "small-3 columns">
+
+                            <label>
+
+                                <!-- step = "any" -->
+                                <b> Tempo </b>
+
+                                <input type = "text" name = "tTempo" id = "cTempo" pattern = "[0-9]"
+                                       placeholder = "tempo..." value="<?= $this->dados['tempo']?>"/>
+                                <small class = "error">  Valor inválido  </small>
+
+                            </label>
+
+                        </div>
+
+                        <div class = "small-3 columns">
+
+                            <label>
+
+                                <!-- step = "any" -->
+                                <b> Esforço </b>
+
+                                <input type = "text" name = "tEsforco" id = "cEsforco" pattern = "[0-9]"
+                                       placeholder = "esforço..." value="<?= $this->dados['esforco']?>"/>
+                                <small class = "error">  Valor inválido  </small>
+
+                            </label>
+
+                        </div>
+
+                </div>
+            </fieldset>
+
+            <div class = "row">
+
+                <!-- Botão Cancelar -->
+
+                <div class = "small-10 columns">
+
+                    <a href="<?= $this->url(array('controller' => 'projetos', 'action' => 'index'), null, true) ?>" class = "button small large radius right"> Cancelar</a>
+
+                </div>
+
+                <!-- Botão Cadastrar -->
+
+                <div class = "small-2 columns clearfix">
+
+                    <input type = "submit" id="btnCadastrar" class = "button success small large radius right" 
+                           value = "  Salvar  " name = "Cadastrar"/> 
+
+                </div>
+                
+                <div>
+                    <input type="hidden" id="btnHidden" value ="<?= $this->idProjGet ?>" name="tHiddenProj" />
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+
+</div>

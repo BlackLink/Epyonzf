@@ -7,11 +7,11 @@
     <div class="large-9 columns">
  
       <h3>Fale Conosco!</h3>
-      <p>Se quiser saber mais sobre nossas competências e produtos contate-nos seguindo as instruções abaixo. Estaremos sempre disponíveis a ajudá-lo.</p>
+      <p align="justify">Se quiser saber mais sobre nossas competências e produtos contate-nos seguindo as instruções abaixo. Estaremos sempre disponíveis para ajudá-lo.</p>
  
       <div class="section-container tabs" data-section>
         <section class="section">
-          <h5 class="title">Preencha os dados abaixo para que possamos analizar sua dúvida</h5>
+          <h5 class="title">Preencha os dados abaixo para que possamos analisar sua dúvida</h5>
           <div class="content" data-slug="panel1">
             <form class="data-abide" method="post" action="<?=$this->url(array('controller'=>'contato','action'=>'enviar'),null,true)?>">
               <div class="row collapse">
@@ -31,7 +31,7 @@
                 </div>
               </div>
               <label>Comentário</label>
-              <textarea rows="4" name="tMsg"></textarea>
+              <textarea rows="4" name="tMsg" id="cTxtAreaProj"></textarea>
               <input type="submit" value="Enviar" class="button sucess radius">
             </form>
           </div>

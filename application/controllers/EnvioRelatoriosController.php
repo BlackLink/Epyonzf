@@ -23,12 +23,22 @@ class EnvioRelatoriosController extends Zend_Controller_Action
         $this->_helper->layout->setLayout('pos-login');
         $dadosUsuario = new Application_Model_EnvioRelatorios();
         $nomeUsuario = $dadosUsuario->selectNome($this->usuario['idLogin']);
-        $this->view->assign("name_user", $nomeUsuario['nome']);
+        $nomeUsuario = explode(" ", $nomeUsuario['nome']);
+        $this->view->assign("name_user", $nomeUsuario[0]);
     }
 
     public function indexAction()
     {
+        $modelColaboradores = new Application_Model_EnvioRelatorios();
+        $projBd = new Application_Model_Projetos();
         
+        $dadosColaboradores = $modelColaboradores->selectColaboradores($this->usuario['idLogin']);
+        $dadosProjeto = $modelColaboradores->selectProjetos($this->usuario['idLogin']);
+        $dadosProjetoBd = $projBd->selectProjetoBD($this->usuario['idLogin']);
+        
+        $this->view->assign("dadosRelatorioBd", $dadosProjetoBd);
+        $this->view->assign("dadosColaborador", $dadosColaboradores);
+        $this->view->assign("dadosRelatorio", $dadosProjeto);
     }
 
 

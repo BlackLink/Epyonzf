@@ -23,16 +23,25 @@ class EstimativasController extends Zend_Controller_Action
         $this->_helper->layout->setLayout('pos-login');
         $dadosUsuario = new Application_Model_Estimativas();
         $nomeUsuario = $dadosUsuario->selectNome($this->usuario['idLogin']);
-        $this->view->assign("name_user", $nomeUsuario['nome']);
+        $nomeUsuario = explode(" ", $nomeUsuario['nome']);
+        $this->view->assign("name_user", $nomeUsuario[0]);
     }
 
     public function indexAction()
     {
         $dadosEstimativas =  new Application_Model_Estimativas();
+        $dbEst = new Application_Model_EstimativasBd();
         
         $dados = $dadosEstimativas->selectEstimativas($this->usuario['idLogin']);
+        $dados2 = $dbEst->selectEstimativaBd($this->usuario['idLogin']);
         
         $this->view->assign("dados", $dados);
+        $this->view->assign("dados2", $dados2);
+    }
+    
+    public function graficosAction ()
+    {
+        
     }
 }
 

@@ -29,7 +29,7 @@ class Application_Model_EmailCadastroColaboradores
    {
        
       $dao = new Application_Model_DbTable_EmailColaboradores();
-      $select = $dao->select()->from($dao)->where("`idEmail-Colaboradores`=".$idCol);
+      $select = $dao->select()->from($dao)->where("idEmail_Colaboradores=".$idCol);
       
       return $dao->fetchAll($select)->toArray();
    }
@@ -41,17 +41,27 @@ class Application_Model_EmailCadastroColaboradores
        $dados = array (
             'nomeCompleto' => $request['tNomeColaborador'],
             'email' => $request['tEmailColaborador'],
+            'excluido' => 'N'
        );
         
-        $where = $dao->getAdapter()->quoteInto("`idEmail-Colaboradores` = ?", $request['tHiddenCol']);
+        $where = $dao->getAdapter()->quoteInto("idEmail_Colaboradores = ?", $request['tHiddenCol']);
         $dao->update($dados, $where);
    }
    
    public function deleteColaborador ($idCol)
    {
        $dao = new Application_Model_DbTable_EmailColaboradores();
-       $where = $dao->getAdapter()->quoteInto("`idEmail-Colaboradores` = ?", $idCol);
-       $dao->delete($where);
+       $select = $dao->select()->from($dao)->where("idEmail_Colaboradores=".$idCol);
+       $select = $dao->fetchRow($select)->toArray();
+       
+       $dados = array (
+            'nomeCompleto' => $select['nomeCompleto'],
+            'email' => $select['email'],
+            'excluido' => 'S'
+       );
+        
+        $where = $dao->getAdapter()->quoteInto("idEmail_Colaboradores = ?", $idCol);
+        $dao->update($dados, $where);
    }
 }
 

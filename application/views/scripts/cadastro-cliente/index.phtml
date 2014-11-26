@@ -1,4 +1,41 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>ErrorLogin</b> and script/action name <b>index</b></p>
-</div>
+<!-- Selecionar usuário -->
+<br />
+<br />
+<br />
+
+    
+    <div class = "row">
+
+              <div class = "small-10 columns small-centered">
+
+                  <fieldset >
+
+                  <legend> Tipo de Cliente </legend>
+
+                  <!-- Campo Desktop -->
+
+                  <div class = "small-4 columns">
+
+                      <input type = "radio" name = "tRadio"value = "pf" onclick="location.href='<?=$this->url(array('controller'=>'cadastro-cliente','action'=>'cliente', 'tipoCliente' => 'pf'),null,true)?>'"/>
+                      <label> <b> Pessoa Física </b> </label>
+
+                  </div>
+
+                  <!-- Campo Mobile -->
+
+                  <div class = "small-4 columns end">
+
+                      <input type = "radio" name = "tRadio"value = "pj" onclick="location.href='<?=$this->url(array('controller'=>'cadastro-cliente','action'=>'cliente', 'tipoCliente' => 'pj'),null,true)?>'"/>
+                      <label> <b> Pessoa Jurídica </b> </label>
+
+                  </div>
+
+            </fieldset>
+        </div>  
+
+    </div>
+
+<br />
+<br />
+<br />
+<br />

@@ -1,10 +1,10 @@
 <div class = "row">
 
-      <div class = "small-10 columns small-centered">
+      <div class = "small-12 columns small-centered">
       
       <fieldset class = "panel radius" id = "fieldPadrao">
 
-        <div class = "small-10 columns small-centered panel radius">
+        <div class = "small-12 columns small-centered panel radius">
 
           <div class = "small-12 columns">
 
@@ -28,7 +28,7 @@
                 <th scope = "column"> Custo </th>
                 <th scope = "column"> Tempo </th>
                 <th scope = "column"> Esforço </th>
-                <th scope = "column"> Excluir </th>
+                <th scope = "column"> Tipo de Métrica </th>
 
               </tr>
 
@@ -38,20 +38,34 @@
             
                 <?php
                     if ($this->dados != null)
-                    {
+                    { $flag = 0;$flag1 = 0;
                         foreach ($this->dados as $tupla)
                         { ?>
 
                             <tr scope = "row">
 
-                                <td scope = "column"> <?php echo $tupla['nome'] ?> </td>
-                                <td scope = "column"> <?php echo $tupla['custo'] ?> </td>
-                                <td scope = "column"> <?php echo $tupla['tempo'] ?> </td>
-                                <td scope = "column"> <?php echo $tupla['esforco'] ?> </td>
-                                <td scope = "column"> <?php echo '<a href = "'.$this->url(array('controller'=>'cadastro-colaboradores','action'=>'delete','idEst'=>$tupla['idEstimativas']),null,true).'"> <i class = "fi-x-circle" id = "iConGeral"></i></a>';?></td>
+                                <td scope = "column"> <?php echo $tupla[$flag]['nome'] ?> </td>
+                                <td scope = "column"> <?php echo '$ '.$tupla[$flag]['custo'] ?> </td>
+                                <td scope = "column"> <?php echo 'HC '.$tupla[$flag]['tempo'] ?> </td>
+                                <td scope = "column"> <?php echo 'H/P '.$tupla[$flag]['esforco'] ?> </td>
+                                <td scope = "column"> <?php echo $tupla[$flag]['tipo_metrica'] ?></td>
 
                             </tr><?php
+                            $flag++;
+                        }
+                        foreach ($this->dados2 as $tupla)
+                        { ?>
+                            
+                            <tr scope = "row">
 
+                                <td scope = "column"> <?php echo $tupla[$flag1]['nome'] ?> </td>
+                                <td scope = "column"> <?php echo $tupla[$flag1]['custo'] ?> </td>
+                                <td scope = "column"> <?php echo $tupla[$flag1]['tempo'] ?> </td>
+                                <td scope = "column"> <?php echo $tupla[$flag1]['esforco'] ?> </td>
+                                <td scope = "column"> <?php echo $tupla[$flag1]['tipo_metrica'] ?></td>
+
+                            </tr><?php
+                            $flag1++;
                         }
                     }
                 ?>
@@ -61,6 +75,43 @@
           </table>
 
         </fieldset>
+          
+          <div>
+              <fieldset class = "panel radius" id = "fieldPadrao">
+                  <div class="row">
+                      
+                  
+                    <div class="small-10 columns">
+                        <p>
+                            <b>Legenda: </b> 
+                        </p>
+                        <p align="justify">
+                            <b>FPU</b>: são os dados fornecidos pelo usuário
+                            na utilização da métrica de estimativa com base em um banco de dados
+                            histórico.
+                        </p>
+                        
+                        <p align="justify">
+                            <b>BD</b>: Métrica com base em um banco de dados histórico.
+                        </p>
+                        
+                        <p align="justify">
+                            <b>AS</b>: Métrica denominada autossuficiente, com base em uma série de dados
+                                       fornecidos pelo usuário.
+                        </p>
+                        
+                        <p align="justify">
+                            <b>HC</b>: Quantidade de horas corridas do presente projeto.
+                        </p>
+                        
+                        <p align="justify">
+                            <b>H/P</b>: Esforço de cada membro da equipe em hora.
+                        </p>
+                    </div>
+                  
+                  </div>
+              </fieldset>
+          </div>
 
       </div>
 

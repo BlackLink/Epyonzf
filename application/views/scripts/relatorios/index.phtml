@@ -25,8 +25,8 @@
               <tr scope = "row">
                 
                 <th scope = "column"> Projeto </th>
+                <th scope = "column"> Relatório </th>
                 <th scope = "column"> Download </th>
-                <th scope = "column"> Excluir </th>
 
               </tr>
 
@@ -34,7 +34,36 @@
           
             <tbody>
             
-                
+                <?php
+                    if ($this->dados != null)
+                    {
+                        foreach ($this->dados as $tupla)
+                        { ?>
+                            
+                            <tr scope = "row">
+
+                                <td scope = "column"> <?php echo $tupla['nome'] ?> </td>
+                                <td scope = "column"> <?php echo '<a href = "'.$this->url(array('controller'=>'relatorios','action'=>'pdf','idProjeto'=>$tupla['idProjetos'],'opcao'=>0),null,true).'" target="_blank"> <i class = "fi-page" id = "iConGeral"></i></a>';?></td>
+                                <td scope = "column"> <?php echo '<a href = "'.$this->url(array('controller'=>'relatorios','action'=>'pdf','idProjeto'=>$tupla['idProjetos'],'opcao'=>1),null,true).'"> <i class = "fi-download" id = "iConGeral"></i></a>';?></td>
+
+                            </tr><?php
+
+                        }
+                        
+                        foreach ($this->dados2 as $tupla)
+                        { ?>
+                            
+                            <tr scope = "row">
+
+                                <td scope = "column"> <?php echo $tupla['nome'] ?> </td>
+                                <td scope = "column"> <?php echo '<a href = "'.$this->url(array('controller'=>'relatorios','action'=>'pdfbd','idProjeto'=>$tupla['idProjetoBd'],'opcao'=>0),null,true).'" target="_blank"> <i class = "fi-page" id = "iConGeral"></i></a>';?></td>
+                                <td scope = "column"> <?php echo '<a href = "'.$this->url(array('controller'=>'relatorios','action'=>'pdfbd','idProjeto'=>$tupla['idProjetoBd'],'opcao'=>1),null,true).'"> <i class = "fi-download" id = "iConGeral"></i></a>';?></td>
+
+                            </tr><?php
+
+                        }
+                    }
+                ?>
 
             </tbody>  
 

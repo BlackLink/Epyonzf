@@ -5,7 +5,36 @@
       <div class = "small-10 columns small-centered">
 
         <form data-abide method="POST" action="<?=$this->url(array('controller'=>'projetos','action'=>'inserir'),null,true)?>">
+          
+          <fieldset class = "panel radius" id = "fieldPadrao">
+              
+                <div class = "panel radius">
 
+                  <div class = "small-12 columns">
+
+                    <h3> Tipo de Métrica </h3>
+                    
+                  </div>
+                  <hr/>
+                    <div class="small-5 columns">
+                        
+                        <br/><br/><input type = "radio" name = "tRadio"value = "bd" onclick="location.href='<?=$this->url(array('controller'=>'cadastro-projetos','action'=>'index'),null,true)?>'"/>
+                        <label> <b> Técnica por dados brutos </b> </label>
+                        
+                    </div>
+                    
+                    <div class="small-4 columns end">
+                        
+                        <br/><br/><input type = "radio" name = "tRadio"value = "bd" onclick="location.href='<?=$this->url(array('controller'=>'cadastro-projetos','action'=>'bd'),null,true)?>'"/>
+                        <label> <b> Técnica por BD </b> </label>
+                        
+                    </div>
+                    
+
+                 </div>
+                  
+            </fieldset>  
+            
           <fieldset class = "panel radius" id = "fieldPadrao">
 
             <div class = "panel radius">
@@ -601,14 +630,22 @@
               
               <!-- Campo Esforço fornecido pelo usuário -->
               
+              <div class="row">
+                      <div class="small-12 columns">
+                          <p>
+                              <b>Os campos abaixo são opcionais.</b>
+                          </p>
+                      </div>
+                  </div>
+              
               <div class = "small-4 columns">
-
+                  
                 <label>
 
-                  <b> Esforço </b>
+                  <b> Pontos de Função </b>
 
-                  <input type = "text" name = "tExtraEsf" id = "cExtraEsf"
-                  placeholder = "Esforço"/>
+                  <input type = "text" name = "tExtraPF" id = "cExtraEsf"
+                         placeholder = "Pontos de Função"/>
 
                 </label>
 
@@ -633,10 +670,10 @@
 
                 <label>
 
-                  <b> Tempo </b>
+                  <b> Produtividade </b>
 
-                  <input type = "text" name = "tExtraTempo" id = "cExtraTempo"
-                  placeholder = "Tempo"/>
+                  <input type = "text" name = "tExtraProdutividade" id = "cExtraTempo"
+                  placeholder = "Produtividade"/>
 
                 </label>
 
@@ -656,7 +693,7 @@
 
             <div class = "small-10 columns">
 
-              <a href="<?=$this->url(array('controller'=>'projetos','action'=>'index'),null,true)?>" class = "button alert small large radius right"> Cancelar</a>
+              <a href="<?=$this->url(array('controller'=>'projetos','action'=>'index'),null,true)?>" class = "button small large radius right"> Cancelar</a>
 
             </div>
 

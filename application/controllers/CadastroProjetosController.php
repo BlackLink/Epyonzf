@@ -23,7 +23,8 @@ class CadastroProjetosController extends Zend_Controller_Action
         $this->_helper->layout->setLayout('pos-login');
         $dadosUsuario = new Application_Model_CadastroProjetos();
         $nomeUsuario = $dadosUsuario->selectNome($this->usuario['idLogin']);
-        $this->view->assign("name_user", $nomeUsuario['nome']);
+        $nomeUsuario = explode(" ", $nomeUsuario['nome']);
+        $this->view->assign("name_user", $nomeUsuario[0]);
     }
 
     public function indexAction()
@@ -45,9 +46,46 @@ class CadastroProjetosController extends Zend_Controller_Action
         $dados = $this->_getAllParams();
         $dadosProjeto = new Application_Model_Projetos();
         $dadosProjeto->updateProjeto($dados);
-        $this->redirect("/projetos");
+        $this->redirect("/estimativas");
         
     }
     
+    public function deleteAction ()
+    {
+        $dados = $this->getParam('idProjeto');
+        $mdProj = new Application_Model_Projetos();
+        $mdProj->deleteProjeto($dados);
+        $this->redirect('/projetos');
+    }
+    
+    public function bdAction()
+    {
+        //somente layout
+    }
+    
+    public function recuperabdAction ()
+    {
+        $db = new Application_Model_Projetos();
+        $idProj = $this->getParam('idProjeto');
+        $dados = $db->selectProjetoBD2($idProj);
+        $this->view->assign("idProjGet", $idProj);
+        $this->view->assign("dados", $dados);
+    }
+    
+    public function updatebdAction()
+    {
+        $dados = $this->_getAllParams();
+        $dadosProjeto = new Application_Model_Projetos();
+        $dadosProjeto->updateBD($dados);
+        $this->redirect("/estimativas");
+    }
+    
+    public function deletebdAction ()
+    {
+        $dados = $this->getParam('idProjeto');
+        $mdProj = new Application_Model_Projetos();
+        $mdProj->deleteBD($dados);
+        $this->redirect('/projetos');
+    }
 }
 

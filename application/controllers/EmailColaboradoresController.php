@@ -22,7 +22,8 @@ class EmailColaboradoresController extends Zend_Controller_Action
         $this->_helper->layout->setLayout('pos-login');
         $dadosUsuario = new Application_Model_EmailColaboradores();
         $nomeUsuario = $dadosUsuario->selectNome($this->usuario['idLogin']);
-        $this->view->assign("name_user", $nomeUsuario['nome']);
+        $nomeUsuario = explode(" ", $nomeUsuario['nome']);
+        $this->view->assign("name_user", $nomeUsuario[0]);
         
     }
 

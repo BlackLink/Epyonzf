@@ -1,0 +1,195 @@
+
+    <div class = "row">
+
+      <div class = "small-4 columns small-centered">
+
+        <h3 id = "topo"> Processo de Compra </h3>
+
+      </div>
+
+    </div>
+
+    <div class = "row">
+      
+      <div class = "small-10 columns small-centered">
+
+        <form data-abide>
+
+          <!-- Dados do Cliente -->
+
+          <fieldset>
+
+            <legend> Dados do Cliente </legend>
+
+            <div class = "row">
+
+              <!-- Campo nome do Cliente -->
+
+              <div class = "small-12 columns">
+
+                <label>
+
+                  <b> Nome </b>
+
+                  <input type = "text" name = "tNome" id = "cNome" required pattern = "[a-zA-Z]+"
+                  placeholder = "Insira seu nome..."/>
+
+                  <small class = "error"> O nome deve ser preenchido corretamente </small>
+
+                </label>
+
+              </div>
+
+              <!-- Campo E-mail -->
+
+              <div class = "small-12 columns">
+
+                <label>
+
+                  <b> E-mail </b>
+
+                  <input type = "text" name = "tEmail" id = "cEmail" placeholder = "Insira e-mail para contato..."/>
+
+                </label>
+
+              </div>
+
+            </div>
+
+          </fieldset>
+
+          <!-- Dados do Cartão -->
+
+          <fieldset>
+
+            <legend> Dados do Cartão </legend>
+
+            <!-- Campo Nome Titular -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns">
+
+                <label>
+
+                  <b> Nome </b>
+
+                  <input type = "text" name = "tNomeTitularCartao" id = "cNomeTitularCartao" 
+                  required pattern = "[a-zA-Z]+" placeholder = "Nome do titular do cartão..."/>
+
+                  <small class = "error"> O nome deve ser preenchido corretamente </small>
+
+                </label>
+
+              </div>
+
+              <!-- Campo Número Cartão -->
+
+              <div class = "small-12 columns">
+
+                <label>
+
+                  <b> Número do Cartão </b>
+
+                  <input type = "text" name = "tNumCartao" id = "cNumCartao"
+                  required pattern = "[0-9]+" placeholder = "Insira o número do cartão..."/>
+
+                  <small class = "error"> Por favor, insira o número do cartão corretamente </small>
+
+                </label>
+
+              </div>
+
+            </div>
+
+            <div class = "row">
+
+              <!-- Campo Código de Segurança -->
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <b> Código de Segurança </b>
+
+                  <input type = "text" name = "tCodSeg" id = "cCodSeg" required pattern = "[0-9]+[0-9]+[0-9]+" 
+                  placeholder = "O três últimos dígitos do fundo do cartão"/>
+                  
+                  <small class = "error"> Por favor, insira o código de segurança corretamente </small>
+
+                </label>
+
+              </div>
+
+              <!-- Campo Data de Validade -->
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <b> Data de Validade </b>
+
+                  <input type = "text" name = "tDataValidade" id = "cDataValidade" required pattern = "" 
+                  placeholder = "ex.: 10/14"/>
+                  
+                  <small class = "error"> Por favor, insira o código de segurança corretamente </small>
+
+                </label>
+
+              </div>
+
+              <!-- Campo Bandeira -->
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <b> Bandeira</b>
+
+                  <select>
+
+                    <option value = "sem-valor">  </option>
+                    <option value = "dinners"> Dinners Club </option>
+                    <option value = "hipercard"> Hipercard </option>
+                    <option value = "mastercard"> Mastercard </option>
+                    <option value = "visa"> Visa </option>
+
+                  </select>
+
+                </label>
+                
+              </div>
+
+            </div>
+
+          </fieldset>
+
+        </form>
+
+        <!-- Botões -->
+
+        <div class = "row">
+
+          <!-- Botão Cancelar -->
+
+            <div class = "small-10 columns">
+
+              <a href="<?=$this->url(array('controller'=>'planos','action'=>'index'),null,true)?>" class = "button small large radius right"> Cancelar</a>
+
+            </div>
+
+            <!-- Botão Cadastrar -->
+
+            <div class = "small-2 columns clearfix">
+
+              <a href="" class = "button success small large radius right"> Cadastrar</a>
+
+            </div>
+          
+        </div>
+          
+        </div>
+
+      </div>
+
+    </div>

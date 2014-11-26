@@ -47,7 +47,7 @@
 
                 </label>
 
-                <table>
+                <table class = "small-12 columns">
 
                     <thead>
 
@@ -61,39 +61,25 @@
 
                     </thead>
 
-                    <tbody>
+                    <tbody id = "email_col">
 
-                      <tr>
+                        <?php
+                            if ($this->dadosColaborador != null)
+                            {
+                                foreach ($this->dadosColaborador as $tupla)
+                                { ?>
 
-                        <td> Cleiton Fernando </td>
-                        <td> cflsena2@gmail.com</td>
-                        <td> <input type = "checkbox" name = "tSelecionar1" id = "cProjeto1"/></td>
+                                    <tr scope = "row">
 
-                      </tr>
+                                        <td scope = "column"> <?php echo $tupla['nomeCompleto'] ?> </td>
+                                        <td scope = "column"> <?php echo $tupla['email'] ?> </td>
+                                        <td scope = "column"> <input type = "checkbox" name = "check_email" value="email"/> </td>
+                                        
+                                    </tr><?php
 
-                      <tr>
-
-                        <td> Luiza Miranda </td>
-                        <td> luiza@gmail.com</td>
-                        <td> <input type = "checkbox" name = "tSelecionar3" id = "cProjeto2"/></td>
-
-                      </tr>
-
-                      <tr>
-
-                        <td> Alessandro Barbieri</td>
-                        <td> alessandrobarbieri@gmail.com</td>
-                        <td> <input type = "checkbox" name = "tSelecionar3" id = "cProjeto3"/></td>
-
-                      </tr>
-
-                      <tr>
-
-                        <td> Marcos Lopes </td>
-                        <td> marcoslopes@gmail.com</td>
-                        <td> <input type = "checkbox" name = "tSelecionar4" id = "cProjeto4"/></td>
-
-                      </tr>
+                                }
+                            }
+                        ?>
 
                     </tbody>
 
@@ -102,68 +88,72 @@
               </div>
 
             </div>
+            
+            <div class ="row">
+            
+                <div class = "small-12 columns">
+                    <label>
 
-            <label>
+                      <b> Corpo do E-mail </b>
 
-              <b> Corpo do E-mail </b>
+                      <textarea name = "corpo_email" placeholder = "Corpo do e-mail" id = "cTxtAreaProj"></textarea>
 
-              <textarea placeholder = "Corpo do e-mail" id = "cTxtAreaProj"></textarea>
+                    </label>
 
-            </label>
+                    <label>
 
-            <label>
+                      <b>Relatórios Cadastrados </b>
 
-              <b>Relatórios Cadastrados </b>
+                    </label>
 
-            </label>
+                    <table class = "small-12 columns">
 
-            <table>
+                      <thead>
 
-              <thead>
+                        <tr>
 
-                <tr>
+                          <th> Nome </th>
+                          <th> Selecionar </th>
 
-                  <th> Nome </th>
-                  <th> Selecionar </th>
+                        </tr>
 
-                </tr>
+                      </thead>
 
-              </thead>
+                      <tbody id = "check_relatorios">
 
-              <tbody>
+                          <?php
+                                if ($this->dadosRelatorio != null)
+                                {
+                                    foreach ($this->dadosRelatorio as $tupla)
+                                    { ?>
 
-                <tr>
+                                        <tr scope = "row">
 
-                  <td> Controle de Estoque </td>
-                  <td> <input type = "checkbox" name = "tSelecionar1" id = "cRelatorio1"/></td>
+                                            <td scope = "column"> <?php echo $tupla['nome'] ?> </td>
+                                            <td scope = "column"> <input type = "checkbox" name = "check_email" value="email"/> </td>
 
-                </tr>
+                                        </tr><?php
 
-                <tr>
+                                    }
+                                    foreach ($this->dadosRelatorioBd as $tupla)
+                                    { ?>
 
-                  <td> Locadora de Veículos </td>
-                  <td> <input type = "checkbox" name = "tSelecionar3" id = "cRelatorio2"/></td>
+                                        <tr scope = "row">
 
-                </tr>
+                                            <td scope = "column"> <?php echo $tupla['nome'] ?> </td>
+                                            <td scope = "column"> <input type = "checkbox" name = "check_email" value="email"/> </td>
 
-                <tr>
+                                        </tr><?php
 
-                  <td> Sistema de Automação Residencial </td>
-                  <td> <input type = "checkbox" name = "tSelecionar3" id = "cRelatorio3"/></td>
+                                    }
+                                }
+                            ?>
 
-                </tr>
+                      </tbody>
 
-                <tr>
-
-                  <td> Sistema de Notas </td>
-                  <td> <input type = "checkbox" name = "tSelecionar4" id = "cRelatorio4"/></td>
-
-                </tr>
-
-              </tbody>
-
-            </table>
-
+                    </table>
+                </div>
+            </div>
           </fieldset>
 
           <!-- Botões -->
@@ -174,7 +164,7 @@
 
             <div class = "small-10 columns">
 
-              <a href="<?= $this->url(array('controller'=>'projetos', 'action'=>'index')) ?>" class = "button alert small large radius right"> Cancelar</a>
+              <a href="<?= $this->url(array('controller'=>'relatorios', 'action'=>'index')) ?>" class = "button small large radius right"> Cancelar</a>
 
             </div>
 

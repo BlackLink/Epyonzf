@@ -25,14 +25,30 @@ class Application_Model_CadastroProjetos
     }  
     
     public function selectProjeto ($idProj)
-    {
-        $db = Zend_Db_Table_Abstract::getDefaultAdapter();
+    {   
+        $dadosGerais = array ();
         
-        $select = $db->select()->from('projetos')
-                ->from('esp_projetos')->from('esp_desenv_proj')
-                ->where('idProjetos = '.$idProj);
+        $dbProj = new Application_Model_DbTable_Projetos();
+        $dbEspProj = new Application_Model_DbTable_EspecifProjetos();
+        $dbEspDesenvProj = new Application_Model_DbTable_EspecifDesenProj();
         
-        return $db->fetchAll($select);
+        $dadosProj = $dbProj->select()->from($dbProj)->where('idProjetos ='.$idProj);
+        
+        $dadosProj = $dbProj->fetchRow($dadosProj)->toArray();
+        
+        $dadosEspProj = $dbEspProj->select()->from($dbEspProj)->where('idEsp_Projetos ='.$dadosProj['codEspProj']);
+        
+        $dadosEspProj = $dbEspProj->fetchRow($dadosEspProj)->toArray();
+        
+        $dadosEspDesenvProj = $dbEspDesenvProj->select()->from($dbEspDesenvProj)->where('idEsp_Desenv_Proj ='.$dadosProj['codEspDesenvProj']);
+        
+        $dadosEspDesenvProj = $dbEspDesenvProj->fetchRow($dadosEspDesenvProj)->toArray();
+        
+        $dadosGerais[0] = $dadosProj;
+        $dadosGerais[1] = $dadosEspProj;
+        $dadosGerais[2] = $dadosEspDesenvProj;
+        
+        return $dadosGerais;
     }
 }
 

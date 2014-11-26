@@ -1,0 +1,436 @@
+<div class="row">
+
+    <div class = "row">
+      
+      <div class = "small-3 columns small-centered">
+
+        <h3> Cadastro Cliente </h3>
+
+      </div> 
+        
+      <div class = "small-10 columns small-centered">
+
+        <form data-abide> 
+
+          <!-- Dados de acesso -->
+
+          <fieldset id = "dados-acesso">
+
+            <legend> Dados de Autenticação </legend>
+
+            <!-- Campo Login -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns">
+
+                <label>
+
+                  <b> Login </b>
+                  
+                  <input type = "text" name = "tLogin" id = "cLogin" placeholder = "escolha um login... ex.: usertest"
+                         maxlength="20" required pattern="[a-zA-Z]+"/>
+                  <small class="error"> Preencha o campo corretamente </small>
+
+                </label>
+
+              </div>  
+
+            </div>
+
+            <!-- Campo Senha -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns ">
+
+                <label>
+                  
+                  <b> Senha </b>
+
+                  <input type = "password" name = "tSenha" id = "cSenha" placeholder = "min de 6 e max 10 caracteres..."
+                         required pattern="\d{6,15}"/>
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>  
+
+            </div>
+
+            <!-- Campo Repertir Senha -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns ">
+
+                <label>
+
+                  <b> Repetir Senha </b>
+
+                  <input type = "password" name = "tRepetirSenha" id = "cRepetirSenha" placeholder = "repita a senha anterior..."
+                         required pattern="\d{6,15}"/>
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>  
+
+            </div>
+
+            <!-- Campo E-mail -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns ">
+
+                <label>
+
+                  <b> E-mail </b>
+
+                  <input type = "email" name = "tEmail" id = "cEmail" placeholder = "ex.: test@domino.com"
+                         required/>
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>  
+
+            </div>
+
+          </fieldset>
+
+          <!-- Dados do Usuário -->
+
+          <fieldset id = "dados-user">
+
+            <legend> Dados do Usuário </legend>
+
+            <!-- Campo Nome -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns ">
+
+                <label>
+
+                  <b> Nome Completo</b>
+
+                  <input type = "text" name = "tNome" id = "cNome" required pattern="[a-zA-Z]+" 
+                  placeholder = "Insira seu nome completo..."/>
+                  
+                  <small class="error"> O nome deve ser preenchido corretamente </small>
+
+                </label>
+
+              </div>  
+
+            </div>
+
+            <!-- Linha Data Nascimento, CPF e RG -->
+
+            <div class = "row">
+
+              <!-- Campo Data Nascimento -->
+
+              <div class = "small-4 columns ">
+
+                <label for = "right-label" >
+
+                  <b> Data Nascimento </b>
+
+                  <input type = "date" name = "tDataNascimento" id = "cDataNascimento"/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>
+
+              <!-- Campo CPF -->
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <b> CPF </b>
+
+                  <input type = "text" name = "tCpf" id = "cCpf" placeholder = "ex.: 000.000.000-00"/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>
+
+              <!-- Campo RG -->
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <b> RG </b>
+
+                  <input type = "text" name = "tRg" id = "cRg" placeholder = "ex.: 9999999999"/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+
+                </label>
+
+              </div>
+    
+            </div>
+
+            <!-- Telefone, celular e sexo -->
+
+            <div class = "row">
+
+              <!-- Campo Telefone -->
+
+              <div class = "small-4 columns ">
+
+                <label>
+
+                  <b> Telefone </b>
+
+                  <input type = "tel" name = "tTelefone" id = "cTelefone" placeholder = "ex.: (DDD) - 9999-9999"
+                         required/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>
+
+              <!-- Campo Celular -->
+
+              <div class = "small-4 columns end">
+
+                <label>
+
+                  <b> Celular </b>
+
+                  <input type = "text" name = "tCelular" id = "cCelular" placeholder = "ex.: (DDD) - 9999-9999"/>
+
+                </label>
+
+              </div>
+
+              <!-- Campo Sexo -->
+
+              <div class = "small-2 columns end">
+
+                <label>
+
+                  <b> Sexo </b>
+
+                  <select>
+
+                    <option value = "sem-valor" name="tSexo" required>  </option>
+                    <option value = "homem" name="tSexo" required> H </option>
+                    <option value = "mulher" name="tSexo" required> M </option>
+                    
+                  </select>
+                  
+                </label>
+
+              </div>
+
+            </div>
+
+          </fieldset>
+
+          <!-- Dados do Endereço -->
+
+          <fieldset>
+
+            <legend>
+              Dados do Endereço
+            </legend>
+
+            <!-- Campo Logradouro -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns">
+
+                <label>
+
+                  <b> Logradouro </b>
+
+                  <input type = "text" name = "tLogradouro" id = "cLogradouro" placeholder = "Insira no nome da sua rua..."
+                         required pattern="[a-zA-Z]"/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>  
+
+            </div>
+
+            <!-- Linha Bairro, Estado e CEP -->
+
+            <div class = "row">
+
+              <!-- Campo País -->
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <b> País </b>
+
+                  <select>
+
+                    <option value = "selectPais" name="tPais"> </option>
+                    <option value = "paisBrasil" name="tPais"> Brasil </option>
+
+                  </select>
+
+                </label>
+
+              </div>
+
+              <!-- Campo Estado -->
+
+              <div class = "small-2 columns">
+
+                <label>
+
+                  <b> Estado</b>
+
+                  <select>
+
+                    <option value = "selectPais" name="tPais">  </option>
+                    <option value = "paisBrasil" name="tPais"> BA </option>
+                    <option value = "paisBrasil" name="tPais"> MG </option>
+                    <option value = "paisBrasil" name="tPais"> CE </option>
+
+                  </select>
+                  
+                </label>
+
+              </div>
+
+              <!-- Campo CEP -->
+
+              <div class = "small-3 columns">
+
+                <label>
+
+                  <b> CEP </b>
+
+                  <input type = "text" name = "tCep" id = "cCep" placeholder = "ex.: 99999-999"
+                         required/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>
+
+              <!-- Campo Cidade -->
+
+              <div class = "small-3 columns">
+
+                <label>
+
+                  <b> Cidade </b>
+
+                  <input type = "text" name = "tCidade" id = "cCidade" placeholder = "Cidade"
+                         required pattern="[a-zA-Z]"/>
+
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>
+
+            </div>
+
+            <!-- Linha Complemento, Bairro e Número -->
+
+            <div class = "row">
+
+              <!-- Campo Bairro -->
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <b> Bairro </b>
+
+                  <input type = "text" name = "tBairro" id = "cBairro" placeholder = "ex.: Avenida Barril"
+                         required pattern="[a-zA-Z]"/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>
+
+              <!-- Campo Número -->
+
+              <div class = "small-2 columns">
+
+                <label>
+
+                  <b> Nº</b>
+
+                  <input type = "number" name = "tNumero" id = "cNumero" placeholder = "ex.: 99"
+                         required/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>
+
+              <!-- Campo Complemento -->
+
+              <div class = "small-6 columns">
+
+                <label>
+
+                  <b> Complemento </b>
+
+                  <input type = "text" name = "tComplemento" id = "cComplemento" placeholder = "Dica para encontrar o endereço..."
+                         required pattern="[a-zA-Z]"/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>  
+
+            </div>
+
+          </fieldset>
+          
+          <div class = "row">
+
+          <!-- Botão Cancelar -->
+
+            <div class = "small-10 columns">
+
+              <a href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>" class = "button small large radius right"> Cancelar</a>
+
+            </div>
+
+            <!-- Botão Cadastrar -->
+
+            <div class = "small-2 columns clearfix">
+
+              <input type = "submit" id="btnCadastrar" class = "button success small large radius right" 
+                     value = "Cadastrar" name = "Cadastrar"/> 
+
+            </div>
+          
+        </div>
+          
+        </form>
+
+      </div>
+
+    </div>

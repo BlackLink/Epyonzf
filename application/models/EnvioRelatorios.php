@@ -25,5 +25,36 @@ class Application_Model_EnvioRelatorios
             return $codClientePj;
     }  
     
+    public function selectColaboradores ($idUser)
+    {
+        $dao = new Application_Model_DbTable_EmailColaboradores();
+      
+        $dbCliente = new Application_Model_DbTable_Cliente();
+
+        $codCliente = $dbCliente->select()->from($dbCliente)->where('codLogin ='.$idUser);
+
+        $codCliente = $dbCliente->fetchRow($codCliente)->toArray();
+
+        $select = $dao->select()->from($dao)->order('nomeCompleto')->where("codCliente =".$codCliente['idCliente'])
+                ->where('excluido = ?', 'N');
+
+        return $dao->fetchAll($select)->toArray();
+    }
+    
+    public function selectProjetos ($idUser)
+    {
+        $db = new Application_Model_DbTable_Projetos();
+        
+        $dbCliente = new Application_Model_DbTable_Cliente;
+        
+        $codCliente = $dbCliente->select()->from($dbCliente)->where('codLogin ='.$idUser);
+        
+        $codCliente = $dbCliente->fetchRow($codCliente)->toArray();
+        
+        $select = $db->select()->from($db)->order('nome')->where("codCliente =".$codCliente['idCliente'])
+                ->where('excluido = ?', 'N');
+        
+        return $db->fetchAll($select)->toArray();
+    }
 }
 

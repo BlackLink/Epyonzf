@@ -1,0 +1,52 @@
+
+
+<div class = "row">
+        
+    <?php
+        
+        if ($this->sucesso == 1)
+        { 
+         ?>
+        <script>
+            alert("Você receberá um e-mail com um link para alterar sua senha, obrigado!");
+            location.href="<?=$this->url(array('controller'=>'alterar-senha','action'=>'envia','email'=>$this->email),null,true)?>";
+        </script>
+            
+        <?php
+        }
+        else 
+        {   ?>
+           <script>
+                alert("E-mail inválido, por favor, tente novamente!");
+                history.go(-1);
+            </script>
+        <?php
+        };
+        ?>
+
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /><br />
+<br />
+<br />
+<br /><br />
+<br />
+<br />
+<br /><br />
+<br />
+<br />
+<br /><br />
+<br />
+<br />
+<br /><br />
+<br />
+<br />
+<br /><br />
+<br />

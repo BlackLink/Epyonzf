@@ -36,7 +36,8 @@ class Application_Model_Estimativas
         
         $codCliente = $dbCliente->fetchRow($codCliente)->toArray();
         
-        $codProj = $dbProjeto->select()->from($dbProjeto)->where("codCliente =".$codCliente['idCliente']);
+        $codProj = $dbProjeto->select()->from($dbProjeto)->where("codCliente =".$codCliente['idCliente'])
+                ->where('excluido = ?', 'N');
         
         $codProj = $dbCliente->fetchAll($codProj)->toArray();
         
@@ -52,7 +53,7 @@ class Application_Model_Estimativas
                     ->from('projetos', array('nome'))->where('codProjeto ='.$codProj[$flag2]['idProjetos'])
                     ->where('codCliente ='.$codCliente['idCliente'])->order('nome');
             
-            $flag [$flag2] = $dbGeral->fetchRow($select);
+            $flag [$flag2] = $dbGeral->fetchAll($select);
             
             $flag2++;
         }
@@ -60,5 +61,6 @@ class Application_Model_Estimativas
         return $flag;
         
     }
+    
 }
 

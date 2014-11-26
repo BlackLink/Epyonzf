@@ -16,7 +16,9 @@
 
 
   <!-- If you are using the gem version, you need this only -->
-
+  
+  <script type="text/javascript" src="/Epyon/public/js/scripts.js"></script>
+          
   <script src="js/vendor/modernizr.js"></script>
 
 </head>
@@ -51,7 +53,7 @@
                 <input type="submit" value="Login" class="button sucess radius">
                 </form>
                 <div class="small-12">
-                    <label><a href="#"> Esqueceu sua senha?</a></label>
+                    <label><a href="<?=$this->url(array('controller'=>'alterar-senha','action'=>'index'),null,true)?>"> Esqueceu sua senha?</a></label>
                 </div>
             </div>
         </div>
@@ -59,8 +61,8 @@
         <div class="large-6 columns auth-plain">
             <div class="signup-panel newusers">
                 <p class="welcome"> Novo Usuário?</p>
-                <p>Criando uma conta conosco, você conseguirá usar todos os nossos serviços e muito mais. Faça parte do Epyon você também</p><br>
-                <a href="#" class="button alert radius ">Sign Up</a></br>
+                <p>Criando uma conta conosco, você conseguirá usar todos os nossos serviços e muito mais. Faça parte do Epyon você também!</p><br>
+                <a href="<?=$this->url(array('controller'=>'cadastro-cliente','action'=>'index'),null,true)?>" class="button alert radius ">Sign Up</a></br>
             </div>
         </div>
 

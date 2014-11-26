@@ -26,13 +26,38 @@ class Application_Model_EmailColaboradores
     
    public function insertColaborador (array $request, $codCliente)
    {
-      $dao = new Application_Model_DbTable_EmailColaboradores();
-      $dados = array(
-         'nomeCompleto' => $request['tNomeColaborador'],
-         'email' => $request['tEmailColaborador'],
-         'codCliente' => $codCliente
-      );
-      return $dao->insert($dados);
+        $dao = new Application_Model_DbTable_EmailColaboradores();
+
+        $selectEmail = $dao->select()->from($dao);
+
+        $selectEmail = $selectEmail->where('nomeCompleto = ?', $request['tNomeColaborador'])
+                ->orWhere('email = ?', $request['tEmailColaborador'])->where('excluido = ?', 'S');
+        $selectEmail = $dao->fetchRow($selectEmail);
+        
+        if ($selectEmail == false)
+        {
+             $dados = array(
+             'nomeCompleto' => $request['tNomeColaborador'],
+             'email' => $request['tEmailColaborador'],
+             'codCliente' => $codCliente,
+             'excluido' => 'N'
+          );
+          return $dao->insert($dados);
+        }
+
+        else
+        {
+           $dados = array (
+                'nomeCompleto' => $request['tNomeColaborador'],
+                'email' => $request['tEmailColaborador'],
+                'codCliente' => $codCliente,
+                'excluido' => 'N'
+           );
+           
+          $where = $dao->getAdapter()->quoteInto("nomeCompleto = ?", $selectEmail['nomeCompleto']);
+          
+          return $dao->update($dados, $where);
+        }
    }
    
    public function selectColaborador($idUser)
@@ -44,8 +69,9 @@ class Application_Model_EmailColaboradores
       $codCliente = $dbCliente->select()->from($dbCliente)->where('codLogin ='.$idUser);
       
       $codCliente = $dbCliente->fetchRow($codCliente)->toArray();
-      
-      $select = $dao->select()->from($dao)->order('nomeCompleto')->where("codCliente =".$codCliente['idCliente']);
+      $n = 'N';
+      $select = $dao->select()->from($dao)->order('nomeCompleto')->where("codCliente =".$codCliente['idCliente'])
+              ->where('excluido = ?', 'N');
       
       return $dao->fetchAll($select)->toArray();
    }

@@ -1,0 +1,367 @@
+<script type="text/javascript" src="/Epyon/public/js/scripts.js"></script>
+<div class = "row">
+      
+      <div class = "row">
+        
+        <div class = "small-3 columns small-centered">
+
+          <h3> Cadastro Cliente </h3>
+
+        </div>  
+        
+        <div class="small-10 columns small-centered">
+        <form data-abide> 
+
+          <!-- Dados de acesso -->
+
+          <fieldset id = "dados-acesso">
+
+            <legend> Dados de Autenticação </legend>
+
+            <!-- Campo Login -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns">
+
+                <label>
+
+                  <b> Login </b>
+                  
+                  <input type = "text" name = "tLogin" id = "cLogin" placeholder = "escolha um login... ex.: usertest"
+                         required pattern="\d{3,15}"/>
+                  <small class="error"> Preencha o campo corretamente </small>
+
+                </label>
+
+              </div>  
+
+            </div>
+
+            <!-- Campo Senha -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns ">
+
+                <label>
+                  
+                  <b> Senha </b>
+
+                  <input type = "password" name = "tSenha" id = "cSenha" placeholder = "min de 6 e max 10 caracteres..."
+                         required pattern="\d{6,15}"/>
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>  
+
+            </div>
+
+            <!-- Campo Repertir Senha -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns ">
+
+                <label>
+
+                  <b> Repetir Senha </b>
+
+                  <input type = "password" name = "tRepetirSenha" id = "cRepetirSenha" placeholder = "repita a senha anterior..."
+                         required pattern="\d{6,15}"/>
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>  
+
+            </div>
+
+            <!-- Campo E-mail -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns ">
+
+                <label>
+
+                  <b> E-mail </b>
+
+                  <input type = "email" name = "tEmail" id = "cEmail" placeholder = "ex.: test@domino.com"
+                         required/>
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>  
+
+            </div>
+
+          </fieldset>
+
+          <!-- Dados da Empresa -->
+
+          <fieldset id = "dados-user">
+
+            <legend> Dados da Empresa </legend>
+
+            <!-- Campo CNPJ -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns ">
+
+                <label>
+
+                  <b> CNPJ </b>
+
+                  <input type = "text" name = "tCnpj" id = "cCnpj" placeholder = "Insira o CNPJ da empresa..."
+                         required/>
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>  
+
+            </div>
+
+            <!-- Campo Razão Social -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns ">
+
+                <label>
+
+                  <b> Razão Social </b>
+
+                  <input type = "text" name = "tRazSocial" id = "cRazSocial" required pattern = "[a-zA-Z]+" 
+                  placeholder = "Insira a razão social da empresa..."/>
+                  
+                  <small class="error"> A razão social deve ser preenchida corretamente </small>
+
+                </label>
+
+              </div>
+
+            </div>
+
+            <!-- Campo Nome Fantasia -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns">
+
+                <label for = "right-label" >
+
+                  <b> Nome Fantasia </b>
+
+                  <input type = "text" name = "tNomeFant" id = "cNomeFant" required pattern = "[a-zA-Z]+" 
+                  placeholder = "Insira o nome fantasia da empresa..."/>
+                  
+                  <small class="error"> O nome fantasia deve ser preenchido corretamente </small>
+
+                </label>
+
+              </div>
+
+            </div>
+
+
+          </fieldset>
+
+          <!-- Dados do Endereço -->
+
+          <fieldset>
+
+            <legend>
+              Dados do Endereço
+            </legend>
+
+            <!-- Campo Logradouro -->
+
+            <div class = "row">
+
+              <div class = "small-12 columns">
+
+                <label>
+
+                  <b> Logradouro </b>
+
+                  <input type = "text" name = "tLogradouro" id = "cLogradouro" placeholder = "Insira no nome da sua rua..."
+                         required pattern="[a-zA-Z]"/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>  
+
+            </div>
+
+            <!-- Linha Bairro, Estado e CEP -->
+
+            <div class = "row">
+
+              <!-- Campo País -->
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <b> País </b>
+
+                  <select>
+
+                    <option value = "selectPais" name="tPais"> </option>
+                    <option value = "paisBrasil" name="tPais"> Brasil </option>
+
+                  </select>
+
+                </label>
+
+              </div>
+
+              <!-- Campo Estado -->
+
+              <div class = "small-2 columns">
+
+                <label>
+
+                  <b> Estado</b>
+
+                  <select>
+
+                    <option value = "selectPais" name="tPais">  </option>
+                    <option value = "paisBrasil" name="tPais"> Brasil </option>
+
+                  </select>
+                  
+                </label>
+
+              </div>
+
+              <!-- Campo CEP -->
+
+              <div class = "small-3 columns">
+
+                <label>
+
+                  <b> CEP </b>
+
+                  <input type = "text" name = "tCep" id = "cCep" placeholder = "ex.: 99999-999"
+                         required/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>
+
+              <!-- Campo Cidade -->
+
+              <div class = "small-3 columns">
+
+                <label>
+
+                  <b> Cidade </b>
+
+                  <input type = "text" name = "tCidade" id = "cCidade" placeholder = "Cidade"
+                         required pattern="[a-zA-Z]"/>
+
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>
+
+            </div>
+
+            <!-- Linha Complemento, Bairro e Número -->
+
+            <div class = "row">
+
+              <!-- Campo Bairro -->
+
+              <div class = "small-4 columns">
+
+                <label>
+
+                  <b> Bairro </b>
+
+                  <input type = "text" name = "tBairro" id = "cBairro" placeholder = "ex.: Avenida Barril"
+                         required pattern="[a-zA-Z]"/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>
+
+              <!-- Campo Número -->
+
+              <div class = "small-2 columns">
+
+                <label>
+
+                  <b> Nº</b>
+
+                  <input type = "number" name = "tNumero" id = "cNumero" placeholder = "ex.: 99"
+                         required/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+
+                </label>
+
+              </div>
+
+              <!-- Campo Complemento -->
+
+              <div class = "small-6 columns">
+
+                <label>
+
+                  <b> Complemento </b>
+
+                  <input type = "text" name = "tComplemento" id = "cComplemento" placeholder = "Dica para encontrar o endereço..."
+                         required pattern="[a-zA-Z]"/>
+                  
+                  <small class="error"> Preencha o campo corretamente </small>
+                  
+                </label>
+
+              </div>  
+
+            </div>
+
+          </fieldset>
+          
+          <div class = "row">
+
+          <!-- Botão Cancelar -->
+
+            <div class = "small-10 columns">
+
+              <a href="<?=$this->url(array('controller'=>'index','action'=>'index'),null,true)?>" class = "button small large radius right"> Cancelar</a>
+
+            </div>
+
+            <!-- Botão Cadastrar -->
+
+            <div class = "small-2 columns clearfix">
+
+              <input type = "submit" id="btnCadastrar" class = "button success small large radius right" 
+                     value = "Cadastrar" name = "Cadastrar"/> 
+
+            </div>
+          
+           </div>
+          
+        </form>
+        </div>
+        <!-- Botões -->
+
+      </div>
+
+    </div>

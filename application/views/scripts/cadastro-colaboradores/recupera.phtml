@@ -39,8 +39,8 @@
 
                   <b> E-mail </b>
 
-                  <input type = "text" name = "tEmailColaborador" value="<?=$this->dados[0]['email']?>" id = "cEmailColaborador"
-                  placeholder = "Insira o e-mail do colaborador" required pattern = "[a-zA-Z]+"/>
+                  <input type = "email" name = "tEmailColaborador" value="<?=$this->dados[0]['email']?>" id = "cEmailColaborador"
+                  placeholder = "Insira o e-mail do colaborador" required/>
 
                   <small class = "error"> Preencha o campo corretamente </small>
 
@@ -57,7 +57,7 @@
             <div class = "small-10 columns">
 
               <a href="<?=$this->url(array('controller'=>'email-colaboradores','action'=>'index'),null,true)?>"
-                 class = "button alert small large radius right"> Cancelar</a>
+                 class = "button small large radius right"> Cancelar</a>
 
             </div>
 
